@@ -1,35 +1,51 @@
 <template>
-  <v-container fluid>
-    <v-slide-y-transition mode="out-in">
-      <v-layout column align-center>
-        <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
-        <blockquote>
-          &#8220;First, solve the problem. Then, write the code.&#8221;
-          <footer>
-            <small>
-              <em>&mdash;John Johnson</em>
-            </small>
-          </footer>
-        </blockquote>
-      </v-layout>
-    </v-slide-y-transition>
-  </v-container>
+  <div>
+    <img class="header-logo" src="@/assets/logoWhite-1.png" alt="">
+    <vue-particles color="#fff"
+      :particleOpacity="0.9"
+      :particlesNumber="100"
+      shapeType="circle"
+      :particleSize="0"
+      linesColor="#fff"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="1"
+      :linesDistance="100"
+      :moveSpeed="2"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+      height="300px"
+    >
+    </vue-particles>
+    
+  </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style lang="scss">
+  #particles-js {
+    background-image: url('http://computerschmiede-jenbach.at/wp-content/uploads/2017/03/04.jpg');
+    background-repeat: repeat-x;
+    height: 600px;
+    border-bottom: 2px solid #3498db;
+  }
+
+  .header-logo {
+    width: 30%;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%)
+    
+  }
+
 </style>
+
+<script>
+export default {
+  
+}
+</script>
+
