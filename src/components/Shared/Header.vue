@@ -1,10 +1,10 @@
 <template>
   <header>
     <v-toolbar fixed>
-      <v-toolbar-side-icon v-model="sideNav" class="hidden-md-and-up"></v-toolbar-side-icon>
+      <v-toolbar-side-icon v-model="sideNav" class="hidden-md-and-up white--text"></v-toolbar-side-icon>
       <v-toolbar-title>
         <router-link to="/">
-          <img src="@/assets/logoWhite-1.png" class="mt-2 logo" alt="">
+          <img src="@/assets/logoWhite-1.png" class="mt-2 ml-4 main-logo" alt="">
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -38,7 +38,7 @@ export default {
   }
   .v-toolbar .v-toolbar__content {
     height: 80px;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.8);
   }
 
   .v-toolbar .v-toolbar__items .v-btn .v-btn__content {
@@ -46,8 +46,9 @@ export default {
     font-weight: 400;
   }
 
-  .logo {
+  .main-logo {
     width: 100%;
+    max-width: 170px;
     max-height: 50px;
   }
 </style>
