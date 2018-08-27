@@ -6,6 +6,8 @@ import CsPc from './views/CSPC'
 import ThreeDPrint from './views/3DPrint'
 import Contact from './views/Contact'
 
+import UnderConstructions from './views/Shared/UnderConst'
+
 Vue.use(Router)
 
 export default new Router({
@@ -36,6 +38,11 @@ export default new Router({
       path: '/kontakt',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/under_const',
+      name: 'Under Constructions',
+      component: UnderConstructions
     }
   ]
 })

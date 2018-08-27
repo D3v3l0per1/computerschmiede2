@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="header-logo" src="@/assets/logoWhite-1.png" alt="">
+    <img class="main-header-logo" src="@/assets/logoWhite-1.png" alt="">
     <vue-particles color="#fff"
       :particleOpacity="0.9"
       :particlesNumber="100"
@@ -38,7 +38,7 @@
       </v-layout>
     </v-container>
 
-    <vue-particles color="#fff"
+    <!-- <vue-particles color="#fff"
       :particleOpacity="0.9"
       :particlesNumber="100"
       shapeType="circle"
@@ -55,7 +55,14 @@
       clickMode="push"
       height="300px"
     >
-    </vue-particles>
+    </vue-particles> -->
+
+    <v-parallax dark src="http://computerschmiede-jenbach.at/img/06.jpg" height="300">
+      <!-- <v-layout align-center column justify-center>
+        <h1 class="display-1 mb-3">Preis Leistung Garantie! <span class="font-weight-light">unser Ziel sind Zufriedene Kunden!</span></h1>
+        <v-btn flat outline class="white--text">Kontakt</v-btn>
+      </v-layout> -->
+    </v-parallax>
 
     <v-container>
       <v-layout row wrap>
@@ -75,12 +82,14 @@
       </v-layout>
     </v-container>
 
-    <v-parallax dark src="http://computerschmiede-jenbach.at/wp-content/uploads/2017/03/04.jpg" height="170">
+    <v-parallax dark src="http://computerschmiede-jenbach.at/img/04.jpg">
       <v-layout align-center column justify-center>
         <h1 class="display-1 mb-3">Preis Leistung Garantie! <span class="font-weight-light">unser Ziel sind Zufriedene Kunden!</span></h1>
         <v-btn flat outline class="white--text">Kontakt</v-btn>
       </v-layout>
     </v-parallax>
+
+    <Footer />
 
   </div>
 </template>
@@ -88,13 +97,13 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   #particles-js {
-    background-image: url('http://computerschmiede-jenbach.at/wp-content/uploads/2017/03/04.jpg');
+    background-image: url('http://www.computerschmiede-jenbach.at/img/wallpapper1.jpg');
     background-repeat: repeat-x;
     height: 600px;
     border-bottom: 2px solid #3498db;
   }
 
-  .header-logo {
+  .main-header-logo {
     width: 30%;
     position: absolute;
     top: 350px;
@@ -103,13 +112,13 @@
   }
 
   @media (max-width: 1000px) {
-    .header-logo {
+    .main-header-logo {
       width: 50%;
     }
   }
 
   @media (max-width: 400px) {
-    .header-logo {
+    .main-header-logo {
       width: 80%;
     }
   }
@@ -132,21 +141,22 @@
 export default {
   data () {
     return {
+      baseUrl: process.env.BASE_URL,
       our_service: [
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/beratung.jpg', title: 'Beratung', text: 'Hier ist der Laie gut aufgehoben und der Profi wird auf Augenhöhe verstanden. Zusammen finden wir die Lösung für Ihre individuellen Bedürfnisse! Ehrlich und Unabhängig!' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/reparatur.jpg', title: 'Reparatur', text: 'Meistens ist die Reparatur eines defekten Geräts sinnvoller und günstiger, als ein Neukauf. Miteinander gegen das vorzeitige Wegwerfen!' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/sonderzeug.jpg', title: 'Anfertigungen', text: 'Mit der Auswahl an optimal aufeinander abgestimmten, hochwertigen Komponenten bieten wir PC-Sonderfertigungen nach Ihren Vorstellungen an.' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/softwareberatung.jpg', title: 'Software-Service', text: 'Computer wieder flott machen – Windows neu aufsetzen – Software entrümpeln – Festplatte bereinigen – Virenschutz und Datensicherung einrichten – Expressbestellungen – Sonderanfertigungen – Umbauten – Upgrades – und noch viel mehr!' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/service.jpg', title: 'Abholung und Lieferung', text: 'Sie wollen Ihre Produkte geliefert bekommen oder wollen Ihr Gerät zum Service abholen lassen? Das lässt sich unkompliziert organisieren!' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/suchen-1.jpg', title: 'Datenrettung', text: 'Ihre Daten können bei uns zu über 95 % vollkommen gerettet werden. Wir analysieren Ihre Festplatten, Speicherkarten und USB-Sticks und retten Ihre Daten, wenn möglich selbst. In den schwierigsten Fällen stehen wir in Verbindung mit einem Datenrettungslabor.' }
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/beratung.jpg', title: 'Beratung', text: 'Hier ist der Laie gut aufgehoben und der Profi wird auf Augenhöhe verstanden. Zusammen finden wir die Lösung für Ihre individuellen Bedürfnisse! Ehrlich und Unabhängig!' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/reparatur.jpg', title: 'Reparatur', text: 'Meistens ist die Reparatur eines defekten Geräts sinnvoller und günstiger, als ein Neukauf. Miteinander gegen das vorzeitige Wegwerfen!' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/sonderzeug.jpg', title: 'Anfertigungen', text: 'Mit der Auswahl an optimal aufeinander abgestimmten, hochwertigen Komponenten bieten wir PC-Sonderfertigungen nach Ihren Vorstellungen an.' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/softwareberatung.jpg', title: 'Software-Service', text: 'Computer wieder flott machen – Windows neu aufsetzen – Software entrümpeln – Festplatte bereinigen – Virenschutz und Datensicherung einrichten – Expressbestellungen – Sonderanfertigungen – Umbauten – Upgrades – und noch viel mehr!' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/service.jpg', title: 'Abholung und Lieferung', text: 'Sie wollen Ihre Produkte geliefert bekommen oder wollen Ihr Gerät zum Service abholen lassen? Das lässt sich unkompliziert organisieren!' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/suchen-1.jpg', title: 'Datenrettung', text: 'Ihre Daten können bei uns zu über 95 % vollkommen gerettet werden. Wir analysieren Ihre Festplatten, Speicherkarten und USB-Sticks und retten Ihre Daten, wenn möglich selbst. In den schwierigsten Fällen stehen wir in Verbindung mit einem Datenrettungslabor.' }
       ],
       our_products: [
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/birne.png', title: 'Batterien', text: 'Batterien, Netzteile, Ladegeräte, Ersatzakkus Kabel und Adapter für Strom, Bild, Ton, Daten, etc.' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/monitore.png', title: 'Computer', text: 'Computer – Standard-Systeme oder individuell konfiguriert! Laptops – selbst konfiguriert bzw. Markengeräte. Tablets, Monitore, Lautsprechersysteme,…' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/farben-1.png', title: 'Farbe', text: 'Tinten/Laser/LED/Gel/3D-Drucker, Tintenpatronen, Tonerkartuschen, Laserdrucker-Ersatzteile, Kopierpapier und spezielle Papiere Druckservice (bis A4, max. 10.000 Blatt, ca. € 0,10/Seite, je nach Deckung)' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/game.png', title: 'Gaming', text: 'Gaming-Equipment, wie z.B. spezielle Gaming-Mäuse und passende Mauspads, Tastaturen mit Sondertasten und Beleuchtung, Headsets mit erweiterten Eigenschaften. Controller und Joysticks, Gaming-Chairs,…' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/959-Keyboard-1.png', title: 'Zubehör', text: 'Tastaturen, Mäuse, Webcams, Headsets, WLAN- und Bluetooth Adapter, USB-Hubs, Reinigungsmittel und vieles mehr …' },
-        { icon: 'http://computerschmiede-jenbach.at/wp-content/uploads/2016/08/19-SD-Card.png', title: 'Speichermedien', text: 'USB Speicherkarte, Speicherplatten oder externe Festplatten.' }
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/birne.png', title: 'Batterien', text: 'Batterien, Netzteile, Ladegeräte, Ersatzakkus Kabel und Adapter für Strom, Bild, Ton, Daten, etc.' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/monitore.png', title: 'Computer', text: 'Computer – Standard-Systeme oder individuell konfiguriert! Laptops – selbst konfiguriert bzw. Markengeräte. Tablets, Monitore, Lautsprechersysteme,…' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/farben-1.png', title: 'Farbe', text: 'Tinten/Laser/LED/Gel/3D-Drucker, Tintenpatronen, Tonerkartuschen, Laserdrucker-Ersatzteile, Kopierpapier und spezielle Papiere Druckservice (bis A4, max. 10.000 Blatt, ca. € 0,10/Seite, je nach Deckung)' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/game.png', title: 'Gaming', text: 'Gaming-Equipment, wie z.B. spezielle Gaming-Mäuse und passende Mauspads, Tastaturen mit Sondertasten und Beleuchtung, Headsets mit erweiterten Eigenschaften. Controller und Joysticks, Gaming-Chairs,…' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/959-Keyboard-1.png', title: 'Zubehör', text: 'Tastaturen, Mäuse, Webcams, Headsets, WLAN- und Bluetooth Adapter, USB-Hubs, Reinigungsmittel und vieles mehr …' },
+        { icon: 'http://computerschmiede-jenbach.at/img/iconss/19-SD-Card.png', title: 'Speichermedien', text: 'USB Speicherkarte, Speicherplatten oder externe Festplatten.' }
       ]
     }
   }
