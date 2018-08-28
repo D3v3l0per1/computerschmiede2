@@ -28,7 +28,8 @@
                 6200 Jenbach <br>
                 Huberstraße 41 <br>
                 Österreich <br><br>
-                Tel.: <a href="tel:+4369911771000" style="text-decoration: none;" class="blue--text">+43 699 11 77 1000</a>
+                Tel.: <a href="tel:+4369911771000" style="text-decoration: none;" class="blue--text">+43 699 11 77 1000</a> <br>
+                Mail: <a href="mailto:office@computerschmiede-jenbach.at" style="text-decoration: none;" class="blue--text">office@computerschmiede-jenbach.at</a>
               </p>
             </v-container>
           </v-flex>

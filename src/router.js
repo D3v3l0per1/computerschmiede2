@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import NProgress from 'nprogress'
 import Home from './views/Home.vue'
 import About from './views/About'
 import CsPc from './views/CSPC'
@@ -10,9 +11,44 @@ import UnderConstructions from './views/Shared/UnderConst'
 
 Vue.use(Router)
 
-export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+// export default new Router({
+//   mode: 'history',
+//   base: process.env.BASE_URL,
+//   routes: [
+//     {
+//       path: '/',
+//       name: 'Home',
+//       component: Home
+//     },
+//     {
+//       path: '/ueber-uns',
+//       name: 'About',
+//       component: About
+//     },
+//     {
+//       path: '/computerschmiede-pc',
+//       name: 'CsPC',
+//       component: CsPc
+//     },
+//     {
+//       path: '/3d-druck',
+//       name: '3DPrint',
+//       component: ThreeDPrint
+//     },
+//     {
+//       path: '/kontakt',
+//       name: 'Contact',
+//       component: Contact
+//     },
+//     {
+//       path: '/under_const',
+//       name: 'Under Constructions',
+//       component: UnderConstructions
+//     }
+//   ]
+// })
+
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -46,3 +82,16 @@ export default new Router({
     }
   ]
 })
+
+router.beforeResolve((to, from, next) => {
+  if (to.name) {
+    NProgress.start()
+  }
+  next()
+})
+
+router.afterEach((to, from) => {
+  NProgress.done()
+})
+
+export default router

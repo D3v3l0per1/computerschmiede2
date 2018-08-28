@@ -44,7 +44,7 @@ export default {
       sideNav: false,
       menuItems: [
         { title: 'Home', link: '/', icon: '' },
-        { title: 'Über uns', link: '/under_const', icon: '' },
+        { title: 'Über uns', link: '/ueber-uns', icon: '' },
         { title: 'Computerschmiede PC', link: '/under_const', icon: '' },
         { title: '3D Druck', link: '/under_const', icon: '' },
         { title: 'Kontakt', link: '/under_const', icon: '' }

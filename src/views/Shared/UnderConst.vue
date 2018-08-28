@@ -22,8 +22,6 @@
       height="500px"
     >
     </vue-particles>
-
-    <Footer />
   </div>
 </template>
 
