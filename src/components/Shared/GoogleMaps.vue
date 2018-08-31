@@ -1,0 +1,3 @@
+<template>
+  <iframe class="googlemap " style="height: 785px; width: 100%; pointer-events: none;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.523016822226!2d11.773940739408246!3d47.396052976525056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4777d5fd0f49792d%3A0xe768f2e0c8de7368!2sComputerschmiede+Jenbach+e.U.!5e0!3m2!1sde!2sat!4v1489068949975&amp;output=embed"></iframe>
+</template>

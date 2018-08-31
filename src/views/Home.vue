@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <img class="main-header-logo" src="@/assets/logoWhite-1.png" alt="">
     <vue-particles color="#fff"
       :particleOpacity="0.9"
@@ -88,7 +89,6 @@
         <v-btn flat outline class="white--text">Kontakt</v-btn>
       </v-layout>
     </v-parallax>
-
   </div>
 </template>
 

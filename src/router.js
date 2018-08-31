@@ -9,45 +9,9 @@ import Contact from './views/Contact'
 
 import UnderConstructions from './views/Shared/UnderConst'
 
+/* eslint-disable */
+
 Vue.use(Router)
-
-// export default new Router({
-//   mode: 'history',
-//   base: process.env.BASE_URL,
-//   routes: [
-//     {
-//       path: '/',
-//       name: 'Home',
-//       component: Home
-//     },
-//     {
-//       path: '/ueber-uns',
-//       name: 'About',
-//       component: About
-//     },
-//     {
-//       path: '/computerschmiede-pc',
-//       name: 'CsPC',
-//       component: CsPc
-//     },
-//     {
-//       path: '/3d-druck',
-//       name: '3DPrint',
-//       component: ThreeDPrint
-//     },
-//     {
-//       path: '/kontakt',
-//       name: 'Contact',
-//       component: Contact
-//     },
-//     {
-//       path: '/under_const',
-//       name: 'Under Constructions',
-//       component: UnderConstructions
-//     }
-//   ]
-// })
-
 const router = new Router({
   routes: [
     {
