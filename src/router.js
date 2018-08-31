@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import NProgress from 'nprogress'
 import Home from './views/Home.vue'
 import About from './views/About'
 import CsPc from './views/CSPC'
@@ -9,10 +8,18 @@ import Contact from './views/Contact'
 
 import UnderConstructions from './views/Shared/UnderConst'
 
+<<<<<<< HEAD
 /* eslint-disable */
 
 Vue.use(Router)
 const router = new Router({
+=======
+Vue.use(Router)
+
+export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+>>>>>>> aa06ae9741f732fdcce923f86cb7dac71ee059d6
   routes: [
     {
       path: '/',
@@ -46,6 +53,7 @@ const router = new Router({
     }
   ]
 })
+<<<<<<< HEAD
 
 router.beforeResolve((to, from, next) => {
   if (to.name) {
@@ -59,3 +67,5 @@ router.afterEach((to, from) => {
 })
 
 export default router
+=======
+>>>>>>> aa06ae9741f732fdcce923f86cb7dac71ee059d6
