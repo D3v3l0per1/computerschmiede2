@@ -88,3 +88,12 @@
     }
   }
 </style>
+
+<script>
+export default {
+  metaInfo: {
+    title: 'Computerschmiede Jenbach',
+    titleTemplate: 'Kontakt | %s'
+  },  
+}
+</script>

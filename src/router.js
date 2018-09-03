@@ -7,6 +7,7 @@ import ThreeDPrint from './views/3DPrint'
 import Contact from './views/Contact'
 
 import UnderConstructions from './views/Shared/UnderConst'
+import PageOutError from './views/Shared/404Error.vue' 
 
 /* eslint-disable */
 
@@ -43,6 +44,11 @@ const router = new Router({
       path: '/under_const',
       name: 'Under Constructions',
       component: UnderConstructions
+    },
+    {
+      path: '/404',
+      name: '404Error',
+      component: PageOutError
     }
   ]
 })

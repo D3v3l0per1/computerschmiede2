@@ -137,6 +137,10 @@
 
 <script>
 export default {
+  metaInfo: {
+    title: 'Computerschmiede Jenbach',
+    titleTemplate: 'Home | %s'
+  },
   data () {
     return {
       baseUrl: process.env.BASE_URL,

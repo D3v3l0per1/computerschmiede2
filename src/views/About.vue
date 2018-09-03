@@ -41,6 +41,10 @@
 
 <script>
 export default {
+  metaInfo: {
+    title: 'Computerschmiede Jenbach',
+    titleTemplate: 'Über uns | %s'
+  },
   data () {
     return {
       parallax_items: [
