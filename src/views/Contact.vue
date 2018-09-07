@@ -25,24 +25,28 @@
 
     <v-layout row wrap>
       <v-flex xs12 sm6>
-        <v-container>
-          <h1 class="mb-2">Computerschmiede Jenbach</h1>
-          <p>
-            <strong>Adresse:</strong> Huberstraße 41, 6200 Jenbach <br>
-            <strong>Tel.:</strong> +43 699 11 77 1000 <br> 
-            <strong>Email:</strong> office@computerschmiede-jenbach.at <br><br> 
-          </p>
-          <h1 class="mb-2">Öffnungszeiten</h1>
-          <p>
-            Mo: 9:00 - 12:00 / 13:00 - 18:30 <br>
-            Di: 9:00 - 12:00 / 13:00 - 18:30 <br>
-            Mi: 13:00 - 18:30 <br>
-            Do: 9:00 - 12:00 / 13:00 - 18:30 <br>
-            Fr: 9:00 - 12:00 / 13:00 - 18:30 <br>
-            Sa: 9:00 - 13:00 <br>
+        <v-parallax dark src="http://computerschmiede-jenbach.at/img/contact.jpg" height="800">
+          <v-layout align-center column justify-center>
+            <v-container text-xs-center class="ma-5 contact-container">
+              <h1 class="mb-2">Computerschmiede Jenbach</h1>
+              <p>
+                <strong>Adresse:</strong> Huberstraße 41, 6200 Jenbach <br>
+                <strong>Tel.:</strong> +43 699 11 77 1000 <br> 
+                <strong>Email:</strong> office@computerschmiede-jenbach.at <br><br> 
+              </p>
+              <h1 class="mb-2">Öffnungszeiten</h1>
+              <p>
+                Mo: 9:00 - 12:00 / 13:00 - 18:30 <br>
+                Di: 9:00 - 12:00 / 13:00 - 18:30 <br>
+                Mi: 13:00 - 18:30 <br>
+                Do: 9:00 - 12:00 / 13:00 - 18:30 <br>
+                Fr: 9:00 - 12:00 / 13:00 - 18:30 <br>
+                Sa: 9:00 - 13:00 <br>
 
-          </p>
-        </v-container>
+              </p>
+            </v-container>
+          </v-layout>
+        </v-parallax>
       </v-flex>
       <v-flex xs12 sm6>
         <google-maps name="test"></google-maps>
@@ -53,6 +57,19 @@
 </template>
 
 <style lang="scss" scoped>
+  .contact-container {
+    max-width: 700px;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: rgba($color: #000000, $alpha: .5)
+  }
+
+  @media (max-width: 1725px) {
+    .contact-container {
+      font-size: 1rem;
+    }
+  }
+
   .contact-header {
     position: absolute;
     top: 220px;
