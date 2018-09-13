@@ -89,10 +89,17 @@
         <v-btn flat outline class="white--text">Kontakt</v-btn>
       </v-layout>
     </v-parallax>
+
+    <v-layout row wrap>
+      <v-flex xs12>
+        <v-card>
+
+        </v-card>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   #particles-js {
     background-image: url('http://www.computerschmiede-jenbach.at/img/wallpapper1.jpg');

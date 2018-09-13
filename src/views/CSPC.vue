@@ -37,34 +37,53 @@
                   <v-card-text>
                     <v-layout row wrap>
                       <v-flex xs12 class="text-xs-center mb-4">
-                        <h1>Stellen Sie Ihren PC zusammen</h1>
+                        <h1 class="mb-3 font-weight-light display-2">Stellen Sie Ihren PC oder Laptop zusammen</h1>
                         <v-divider></v-divider>
                       </v-flex>
-                      <v-flex xs10>
-                        <v-slider v-model="sliderg" label="Gaming" :max="maxg" :min="ming"></v-slider>
+                      <v-flex xs12>
+                        <h2>Bereich</h2>
+                        <v-divider class="mt-2 mb-2"></v-divider>
+                      </v-flex>
+                      <v-flex xs12>
+                        <p class="display-2">Gaming/Streaming</p>
+                      </v-flex>
+                      <v-flex xs12>
+                        <v-slider v-model="sliderg" :max="maxg" :min="ming"></v-slider>
                       </v-flex>
                       <v-flex xs1 offset-xs1 style="width: 60px">
                         <v-text-field v-model="sliderg" class="mt-0" hide-details single-line type="number"></v-text-field>
                       </v-flex>
-                      <v-flex xs10>
-                        <v-slider v-model="slidero" label="Office" :max="maxo" :min="mino"></v-slider>
+                      <!-- v-flex xs10>
+                        <v-slider v-model="slidero" label="Office/Hausgebrauch/Schule" :max="maxo" :min="mino"></v-slider>
                       </v-flex>
                       <v-flex xs1 offset-xs1 style="width: 60px">
                         <v-text-field v-model="slidero" class="mt-0" hide-details single-line type="number"></v-text-field>
                       </v-flex>
                       <v-flex xs10>
-                        <v-slider v-model="sliders" label="Streaming" :max="maxs" :min="mins"></v-slider>
+                        <v-slider v-model="sliders" label="3D/CAD" :max="maxs" :min="mins"></v-slider>
                       </v-flex>
                       <v-flex xs1 offset-xs1 style="width: 60px">
                         <v-text-field v-model="sliders" class="mt-0" hide-details single-line type="number"></v-text-field>
                       </v-flex>
+                      <v-flex xs10>
+                        <v-slider v-model="sliders" label="Design" :max="maxs" :min="mins"></v-slider>
+                      </v-flex>
+                      <v-flex xs1 offset-xs1 style="width: 60px">
+                        <v-text-field v-model="sliders" class="mt-0" hide-details single-line type="number"></v-text-field>
+                      </v-flex>
+                      <v-flex xs10>
+                        <v-slider v-model="sliders" label="Budget" :max="maxs" :min="mins"></v-slider>
+                      </v-flex>
+                      <v-flex xs1 offset-xs1 style="width: 60px">
+                        <v-text-field v-model="sliders" class="mt-0" hide-details single-line type="number"></v-text-field>
+                      </v-flex> -->
                     </v-layout>
                   </v-card-text>
                 </v-card>
 
                 <v-btn color="primary" @click="e1 = 2">Weiter</v-btn>
 
-                <v-btn flat>Abbrechen</v-btn>
+                <v-btn flat @click="e1 = 1">Abbrechen</v-btn>
               </v-stepper-content>
 
               <v-stepper-content step="2">
@@ -72,44 +91,110 @@
 
                 <v-btn color="primary" @click="e1 = 3">Weiter</v-btn>
 
-                <v-btn flat>Abbrechen</v-btn>
+                <v-btn flat @click="e1 = 1">Abbrechen</v-btn>
               </v-stepper-content>
 
               <v-stepper-content step="3">
                 <v-card class="mb-5" color="red lighten-1" height="200px"></v-card>
 
+                <v-btn color="primary" @click="e1 = 4">Weiter</v-btn>
+
+                <v-btn flat @click="e1 = 1">Abbrechen</v-btn>
+              </v-stepper-content>
+
+              <v-stepper-content step="4">
+                <v-card class="mb-5" color="red lighten-1" height="200px"></v-card>
+
                 <v-btn color="primary" @click="e1 = 1">Weiter</v-btn>
 
-                <v-btn flat>Abbrechen</v-btn>
+                <v-btn flat @click="e1 = 1">Abbrechen</v-btn>
               </v-stepper-content>
             </v-stepper-items>
           </v-stepper>
 
+        </v-flex>
+
+        <v-flex xs12>
+          <v-container>
+            <v-layout row wrap>
+              <v-flex xs12>
+                <v-layout row wrap class="mb-4">
+                  <v-flex xs12 sm6>
+                    <h2>CPU (Prozessor)</h2>
+                    <v-divider class="mb-2 mt-1"></v-divider>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
+                  </v-flex>
+                  <v-flex xs12 sm6>
+                    <img src="http://computerschmiede-jenbach.at/img/04.jpg" class="pl-5 mt-4" style="width: 100%;" alt="">
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap class="mb-4">
+                  <v-flex xs12 sm6>
+                    <img src="http://computerschmiede-jenbach.at/img/04.jpg" class="pr-5 mt-4" style="width: 100%;" alt="">
+                  </v-flex>
+                  <v-flex xs12 sm6>
+                    <h2>RAM (Arbeitsspeicher)</h2>
+                    <v-divider class="mb-2 mt-1"></v-divider>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap class="mb-4">
+                  <v-flex xs12 sm6>
+                    <h2>Mainboard</h2>
+                    <v-divider class="mb-2 mt-1"></v-divider>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
+                  </v-flex>
+                  <v-flex xs12 sm6>
+                    <img src="http://computerschmiede-jenbach.at/img/04.jpg" class="pl-5 mt-4" style="width: 100%;" alt="">
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap class="mb-4">
+                  <v-flex xs12 sm6>
+                    <img src="http://computerschmiede-jenbach.at/img/04.jpg" class="pr-5 mt-4" style="width: 100%;" alt="">
+                  </v-flex>
+                  <v-flex xs12 sm6>
+                    <h2>Gehäuse</h2>
+                    <v-divider class="mb-2 mt-1"></v-divider>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
+                  </v-flex>
+                </v-layout>
+              </v-flex>
+            </v-layout>
+          </v-container>
         </v-flex>
       </v-layout>
     </v-container>
 
   </div>
 </template>
-
+//  v-for="part in partDescription" :key="part.title"
 <script>
 export default {
   data () {
     return {
       ming: 0,
-      maxg: 100,
+      maxg: 10,
       sliderg: 0,
       mino: 0,
-      maxo: 100,
+      maxo: 10,
       slidero: 0,
       mins: 0,
-      maxs: 100,
+      maxs: 10,
       sliders: 0,
       e1: 1,
       stepperItems: [
         { step: '1', name: 'First Step' },
         { step: '2', name: 'Second Step' },
-        { step: '3', name: 'Third Step' }
+        { step: '3', name: 'Third Step' },
+        { step: '4', name: 'Fourth Step' }
+      ],
+      partDescription: [
+        { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' },
+        { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' },
+        { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' },
+        { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' },
+        { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' },
+        { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' }
       ]
     }
   }
