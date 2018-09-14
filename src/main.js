@@ -4,12 +4,17 @@ import './plugins/vuetify'
 import App from './App.vue'
 import router from './router'
 import { store } from './store/index'
+import * as firebase from 'firebase'
 import './registerServiceWorker'
 import VueParticles from 'vue-particles'
 import Header from './components/Shared/Header'
 import Footer from './components/Shared/Footer'
+import AlertCmp from './components/Shared/Alert' 
 import GoogleMaps from './components/Shared/GoogleMaps'
 import Meta from 'vue-meta'
+import CMSBar from './components/Shared/Edit/CMSBar'
+
+import EditNav from './views/EditPage/SideNav'
 
 Vue.config.productionTip = false
 
@@ -20,10 +25,24 @@ Vue.use(Meta, {
 
 Vue.component('Header', Header)
 Vue.component('Footer', Footer)
+Vue.component('app-alert', AlertCmp)
 Vue.component('google-maps', GoogleMaps)
+
+Vue.component('app-cms-bar', CMSBar)
+Vue.component('app-edit-sidenav', EditNav)
 
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  created () {
+    firebase.initializeApp({
+      apiKey: "AIzaSyB3iiY8_6mOw9ncbUsWrSWXJ_FnKrDuaEE",
+      authDomain: "computerschmiede-jenbach.firebaseapp.com",
+      databaseURL: "https://computerschmiede-jenbach.firebaseio.com",
+      projectId: "computerschmiede-jenbach",
+      storageBucket: "computerschmiede-jenbach.appspot.com",
+      messagingSenderId: "539826549672"
+    })
+  }
 }).$mount('#app')

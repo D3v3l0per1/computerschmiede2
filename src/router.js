@@ -5,9 +5,14 @@ import About from './views/About'
 import CsPc from './views/CSPC'
 import ThreeDPrint from './views/3DPrint'
 import Contact from './views/Contact'
+import SignIn from './views/User/SignIn'
+import SignUp from './views/User/SignUp'
+
+import EditPage from './views/EditPage/Home'
 
 import UnderConstructions from './views/Shared/UnderConst'
 import PageOutError from './views/Shared/404Error.vue' 
+import authGuard from './auth-guard';
 
 /* eslint-disable */
 
@@ -26,6 +31,16 @@ const router = new Router({
       component: About
     },
     {
+      path: '/signin',
+      name: 'SignIn',
+      component: SignIn
+    },
+    {
+      path: '/signup',
+      name: 'SignUp',
+      component: SignUp
+    },
+    {
       path: '/computerschmiede-pc',
       name: 'CsPC',
       component: CsPc
@@ -41,6 +56,12 @@ const router = new Router({
       component: Contact
     },
     {
+      path: '/edit',
+      name: 'Edit Page',
+      component: EditPage,
+      beforeEnter: authGuard
+    },
+    {
       path: '/under_const',
       name: 'Under Constructions',
       component: UnderConstructions
@@ -54,6 +75,7 @@ const router = new Router({
 })
 
 router.beforeResolve((to, from, next) => {
+  console.log('Loaded')
   if (to.name) {
     NProgress.start()
   }

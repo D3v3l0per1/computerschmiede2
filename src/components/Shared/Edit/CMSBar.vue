@@ -1,23 +1,5 @@
 <template>
-  <v-app>
-
-    <!-- <div class="preloader">
-      <div class="reloader__status">
-        <div class="preloader__status-text">I'm {{ loaded }} % done!</div>
-        <div class="preloader__status-loader">
-          <div loader :style="loadStyle" class="preloader__status-bar"></div>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="frontpage">
-      <Header />
-
-      <router-view></router-view>
-
-      <Footer />
-
-      <v-speed-dial
+  <v-speed-dial
       v-model="fab"
       :top="top"
       :bottom="bottom"
@@ -62,43 +44,24 @@
         <v-icon>delete</v-icon>
       </v-btn>
     </v-speed-dial>
-    </div>
-
-  </v-app>
 </template>
 
 <script>
-
-import JQuery from 'jquery'
-let $ = JQuery
-
 export default {
-  name: 'App',
-  data () {
-    return {
-      direction: 'top',
+  data: () => ({
+    direction: 'top',
     fab: false,
+    fling: false,
     hover: false,
     tabs: null,
-    top: true,
-    right: false,
+    top: false,
+    right: true,
     bottom: true,
     left: false,
-    transition: 'slide-y-reverse-transition',
-      // loaded: 0,
-      // loading: null,
-      // loadStyle: {
-      //   width: '0%'
-      // },
-      // statusElem: $('[status]'),
-      // loader: $('[loader]'),
-      // body: $('[body]')
-    }
-  },
+    transition: 'slide-y-reverse-transition'
+  }),
+
   computed: {
-    userIsAuthenticated () {
-      return this.$store.getters.user !== null && this.$store.getters.user !== undefined
-    },
     activeFab () {
       switch (this.tabs) {
         case 'one': return { 'class': 'purple', icon: 'account_circle' }
@@ -108,15 +71,8 @@ export default {
       }
     }
   },
-  ready () {
-    // this.preloader = $(this.$el)
-    this.removeScrolling()
-    this.startLoading()
-  },
+
   watch: {
-    loaded () {
-      this.loadStyle.width = `${this.loaded}`
-    },
     top (val) {
       this.bottom = !val
     },
@@ -128,12 +84,6 @@ export default {
     },
     left (val) {
       this.right = !val
-    }
-  },
-  methods: {
-    removeScrolling () {
-      this.body.css('overflow', 'hidden')
-      console.log('Removed Scrolling')
     }
   }
 }
