@@ -17,7 +17,7 @@
 
       <Footer />
 
-      <v-speed-dial
+      <!-- <v-speed-dial
       v-model="fab"
       :top="top"
       :bottom="bottom"
@@ -61,7 +61,7 @@
       >
         <v-icon>delete</v-icon>
       </v-btn>
-    </v-speed-dial>
+    </v-speed-dial> -->
     </div>
 
   </v-app>
@@ -69,8 +69,8 @@
 
 <script>
 
-import JQuery from 'jquery'
-let $ = JQuery
+// import JQuery from 'jquery'
+// let $ = JQuery
 
 export default {
   name: 'App',

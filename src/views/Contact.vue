@@ -57,6 +57,11 @@
 </template>
 
 <style lang="scss" scoped>
+
+  .v-parallax__image-container img {
+    height: 200px;
+  }
+
   .contact-container {
     max-width: 700px;
     width: 100%;
