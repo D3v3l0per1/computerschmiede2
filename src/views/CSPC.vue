@@ -44,16 +44,16 @@
                         <h2>Bereich</h2>
                         <v-divider class="mt-2 mb-2"></v-divider>
                       </v-flex>
-                      <v-flex xs12>
-                        <p class="display-2">Gaming/Streaming</p>
+                      <!-- <v-flex xs12 sm2>
+                        <p class="custom-configurator-label">Gaming/Streaming</p>
                       </v-flex>
-                      <v-flex xs12>
+                      <v-flex xs12 sm8>
                         <v-slider v-model="sliderg" :max="maxg" :min="ming"></v-slider>
                       </v-flex>
                       <v-flex xs1 offset-xs1 style="width: 60px">
                         <v-text-field v-model="sliderg" class="mt-0" hide-details single-line type="number"></v-text-field>
-                      </v-flex>
-                      <!-- v-flex xs10>
+                      </v-flex> -->
+                      <v-flex xs10>
                         <v-slider v-model="slidero" label="Office/Hausgebrauch/Schule" :max="maxo" :min="mino"></v-slider>
                       </v-flex>
                       <v-flex xs1 offset-xs1 style="width: 60px">
@@ -76,7 +76,7 @@
                       </v-flex>
                       <v-flex xs1 offset-xs1 style="width: 60px">
                         <v-text-field v-model="sliders" class="mt-0" hide-details single-line type="number"></v-text-field>
-                      </v-flex> -->
+                      </v-flex>
                     </v-layout>
                   </v-card-text>
                 </v-card>
@@ -125,12 +125,12 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
                   </v-flex>
                   <v-flex xs12 sm6>
-                    <img src="http://computerschmiede-jenbach.at/img/04.jpg" class="pl-5 mt-4" style="width: 100%;" alt="">
+                    <img src="@/assets/cpu.png" class="pl-5 mt-4" style="width: 100%;" alt="">
                   </v-flex>
                 </v-layout>
                 <v-layout row wrap class="mb-4">
                   <v-flex xs12 sm6>
-                    <img src="http://computerschmiede-jenbach.at/img/04.jpg" class="pr-5 mt-4" style="width: 100%;" alt="">
+                    <img src="@/assets/ram.png" class="pr-5 mt-4" style="width: 100%;" alt="">
                   </v-flex>
                   <v-flex xs12 sm6>
                     <h2>RAM (Arbeitsspeicher)</h2>
@@ -145,12 +145,12 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
                   </v-flex>
                   <v-flex xs12 sm6>
-                    <img src="http://computerschmiede-jenbach.at/img/04.jpg" class="pl-5 mt-4" style="width: 100%;" alt="">
+                    <img src="@/assets/mainboard.png" class="pl-5 mt-4" style="width: 100%;" alt="">
                   </v-flex>
                 </v-layout>
                 <v-layout row wrap class="mb-4">
                   <v-flex xs12 sm6>
-                    <img src="http://computerschmiede-jenbach.at/img/04.jpg" class="pr-5 mt-4" style="width: 100%;" alt="">
+                    <img src="@/assets/case.png" class="pr-5 mt-4" style="width: 100%;" alt="">
                   </v-flex>
                   <v-flex xs12 sm6>
                     <h2>Gehäuse</h2>
@@ -170,6 +170,10 @@
 //  v-for="part in partDescription" :key="part.title"
 <script>
 export default {
+  metaInfo: {
+    title: 'Computerschmiede Jenbach',
+    titleTemplate: 'Computerschmiede PC | %s'
+  },  
   data () {
     return {
       ming: 0,
@@ -202,6 +206,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  .custom-configurator-label {
+    font-size: 24px;
+  }
+
   .header {
     position: absolute;
     top: 220px;
