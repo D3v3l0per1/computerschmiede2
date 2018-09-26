@@ -125,12 +125,12 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
                   </v-flex>
                   <v-flex xs12 sm6>
-                    <img src="@/assets/cpu.png" class="pl-5 mt-4" style="width: 100%;" alt="">
+                    <img src="@/assets/cpu.png" class="pl-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
                   </v-flex>
                 </v-layout>
                 <v-layout row wrap class="mb-4">
                   <v-flex xs12 sm6>
-                    <img src="@/assets/ram.png" class="pr-5 mt-4" style="width: 100%;" alt="">
+                    <img src="@/assets/ram.png" class="pr-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
                   </v-flex>
                   <v-flex xs12 sm6>
                     <h2>RAM (Arbeitsspeicher)</h2>
@@ -145,12 +145,12 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
                   </v-flex>
                   <v-flex xs12 sm6>
-                    <img src="@/assets/mainboard.png" class="pl-5 mt-4" style="width: 100%;" alt="">
+                    <img src="@/assets/mainboard.png" class="pl-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
                   </v-flex>
                 </v-layout>
                 <v-layout row wrap class="mb-4">
                   <v-flex xs12 sm6>
-                    <img src="@/assets/case.png" class="pr-5 mt-4" style="width: 100%;" alt="">
+                    <img src="@/assets/case.png" class="pr-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
                   </v-flex>
                   <v-flex xs12 sm6>
                     <h2>Gehäuse</h2>

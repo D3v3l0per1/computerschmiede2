@@ -83,9 +83,9 @@
       </v-layout>
     </v-container>
 
-    <v-parallax dark src="http://computerschmiede-jenbach.at/img/04.jpg">
+    <v-parallax dark src="http://computerschmiede-jenbach.at/img/home_bg_2.png">
       <v-layout align-center column justify-center>
-        <h1 class="display-1 mb-3">Preis Leistung Garantie! <span class="font-weight-light">unser Ziel sind Zufriedene Kunden!</span></h1>
+        <h1 class="display-2 mb-3" style="background: rgba(0,0,0,.8); padding: 2px 10px; border: 2px solid white;"><span class="font-weight-regular">Fragen kost' nix</span></h1>
         <v-btn flat outline class="white--text">Kontakt</v-btn>
       </v-layout>
     </v-parallax>
