@@ -29,34 +29,17 @@
         </v-flex>
         <v-flex xs12>
           <v-layout row wrap>
-            <v-flex xs12 sm4 v-for="item in our_service" :key="item.title" class="teaser" text-xs-center>
-              <img :src="item.icon" class="teaser-img" alt="">
-              <h5 class="teaser-headline">{{ item.title }}</h5>
-              <p>{{ item.text }}</p>
-            </v-flex>
+            <div id="duration">
+              <v-flex xs12 sm4 v-for="item in our_service" v-anime="{ translateX: 250, duration: 3000, loop: true }" :key="item.title" :class="'teaser' + item.teaserAnim" text-xs-center>
+                <img :src="item.icon" class="teaser-img" alt="">
+                <h5 class="teaser-headline">{{ item.title }}</h5>
+                <p>{{ item.text }}</p>
+              </v-flex>
+            </div>
           </v-layout>
         </v-flex>
       </v-layout>
     </v-container>
-
-    <!-- <vue-particles color="#fff"
-      :particleOpacity="0.9"
-      :particlesNumber="100"
-      shapeType="circle"
-      :particleSize="0"
-      linesColor="#fff"
-      :linesWidth="1"
-      :lineLinked="true"
-      :lineOpacity="1"
-      :linesDistance="100"
-      :moveSpeed="2"
-      :hoverEffect="true"
-      hoverMode="grab"
-      :clickEffect="true"
-      clickMode="push"
-      height="300px"
-    >
-    </vue-particles> -->
 
     <v-parallax dark src="http://computerschmiede-jenbach.at/img/04.jpg" height="300">
       <!-- <v-layout align-center column justify-center>
@@ -73,7 +56,7 @@
         </v-flex>
         <v-flex xs12>
           <v-layout row wrap>
-            <v-flex xs12 sm4 v-for="item in our_products" :key="item.title" class="teaser" text-xs-center>
+            <v-flex xs12 sm4 v-for="item in our_products" :key="item.title" :class="'teaser ' + item.teaserAnim" text-xs-center>
               <img :src="item.icon" class="teaser-img" alt="">
               <h5 class="teaser-headline">{{ item.title }}</h5>
               <p>{{ item.text }}</p>
@@ -152,12 +135,12 @@ export default {
     return {
       baseUrl: process.env.BASE_URL,
       our_service: [
-        { icon: 'http://computerschmiede-jenbach.at/img/icons/beratung.jpg', title: 'Beratung', text: 'Hier ist der Laie gut aufgehoben und der Profi wird auf Augenhöhe verstanden. Zusammen finden wir die Lösung für Ihre individuellen Bedürfnisse! Ehrlich und Unabhängig!' },
-        { icon: 'http://computerschmiede-jenbach.at/img/icons/reparatur.jpg', title: 'Reparatur', text: 'Meistens ist die Reparatur eines defekten Geräts sinnvoller und günstiger, als ein Neukauf. Miteinander gegen das vorzeitige Wegwerfen!' },
-        { icon: 'http://computerschmiede-jenbach.at/img/icons/sonderzeug.jpg', title: 'Anfertigungen', text: 'Mit der Auswahl an optimal aufeinander abgestimmten, hochwertigen Komponenten bieten wir PC-Sonderfertigungen nach Ihren Vorstellungen an.' },
-        { icon: 'http://computerschmiede-jenbach.at/img/icons/softwareberatung.jpg', title: 'Software-Service', text: 'Computer wieder flott machen – Windows neu aufsetzen – Software entrümpeln – Festplatte bereinigen – Virenschutz und Datensicherung einrichten – Expressbestellungen – Sonderanfertigungen – Umbauten – Upgrades – und noch viel mehr!' },
-        { icon: 'http://computerschmiede-jenbach.at/img/icons/service.jpg', title: 'Abholung und Lieferung', text: 'Sie wollen Ihre Produkte geliefert bekommen oder wollen Ihr Gerät zum Service abholen lassen? Das lässt sich unkompliziert organisieren!' },
-        { icon: 'http://computerschmiede-jenbach.at/img/icons/suchen-1.jpg', title: 'Datenrettung', text: 'Ihre Daten können bei uns zu über 95 % vollkommen gerettet werden. Wir analysieren Ihre Festplatten, Speicherkarten und USB-Sticks und retten Ihre Daten, wenn möglich selbst. In den schwierigsten Fällen stehen wir in Verbindung mit einem Datenrettungslabor.' }
+        { icon: 'http://computerschmiede-jenbach.at/img/icons/beratung.jpg', title: 'Beratung', teaserAnim: ' left', text: 'Hier ist der Laie gut aufgehoben und der Profi wird auf Augenhöhe verstanden. Zusammen finden wir die Lösung für Ihre individuellen Bedürfnisse! Ehrlich und Unabhängig!' },
+        { icon: 'http://computerschmiede-jenbach.at/img/icons/reparatur.jpg', title: 'Reparatur', teaserAnim: ' left', text: 'Meistens ist die Reparatur eines defekten Geräts sinnvoller und günstiger, als ein Neukauf. Miteinander gegen das vorzeitige Wegwerfen!' },
+        { icon: 'http://computerschmiede-jenbach.at/img/icons/sonderzeug.jpg', title: 'Anfertigungen', teaserAnim: ' left', text: 'Mit der Auswahl an optimal aufeinander abgestimmten, hochwertigen Komponenten bieten wir PC-Sonderfertigungen nach Ihren Vorstellungen an.' },
+        { icon: 'http://computerschmiede-jenbach.at/img/icons/softwareberatung.jpg', title: 'Software-Service', teaserAnim: ' left', text: 'Computer wieder flott machen – Windows neu aufsetzen – Software entrümpeln – Festplatte bereinigen – Virenschutz und Datensicherung einrichten – Expressbestellungen – Sonderanfertigungen – Umbauten – Upgrades – und noch viel mehr!' },
+        { icon: 'http://computerschmiede-jenbach.at/img/icons/service.jpg', title: 'Abholung und Lieferung', teaserAnim: ' left', text: 'Sie wollen Ihre Produkte geliefert bekommen oder wollen Ihr Gerät zum Service abholen lassen? Das lässt sich unkompliziert organisieren!' },
+        { icon: 'http://computerschmiede-jenbach.at/img/icons/suchen-1.jpg', title: 'Datenrettung', teaserAnim: ' left', text: 'Ihre Daten können bei uns zu über 95 % vollkommen gerettet werden. Wir analysieren Ihre Festplatten, Speicherkarten und USB-Sticks und retten Ihre Daten, wenn möglich selbst. In den schwierigsten Fällen stehen wir in Verbindung mit einem Datenrettungslabor.' }
       ],
       our_products: [
         { icon: 'http://computerschmiede-jenbach.at/img/icons/birne.png', title: 'Batterien', text: 'Batterien, Netzteile, Ladegeräte, Ersatzakkus Kabel und Adapter für Strom, Bild, Ton, Daten, etc.' },
@@ -168,6 +151,18 @@ export default {
         { icon: 'http://computerschmiede-jenbach.at/img/icons/19-SD-Card.png', title: 'Speichermedien', text: 'USB Speicherkarte, Speicherplatten oder externe Festplatten.' }
       ]
     }
+  },
+  mounted () {
+    this.$anime()
+  },
+  methods: {
+    // animate: function () {
+    //   anime ({
+    //     targets: '#duration .teaserAnim',
+    //     duration: '1500',
+    //     translateX: '250'
+    //   })
+    // }
   }
 }
 </script>

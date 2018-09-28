@@ -40,42 +40,21 @@
                         <h1 class="mb-3 font-weight-light display-2">Stellen Sie Ihren PC oder Laptop zusammen</h1>
                         <v-divider></v-divider>
                       </v-flex>
+
                       <v-flex xs12>
-                        <h2>Bereich</h2>
+                        <h2>Bereiche zur Verwendung </h2>
                         <v-divider class="mt-2 mb-2"></v-divider>
                       </v-flex>
-                      <!-- <v-flex xs12 sm2>
-                        <p class="custom-configurator-label">Gaming/Streaming</p>
-                      </v-flex>
-                      <v-flex xs12 sm8>
-                        <v-slider v-model="sliderg" :max="maxg" :min="ming"></v-slider>
-                      </v-flex>
-                      <v-flex xs1 offset-xs1 style="width: 60px">
-                        <v-text-field v-model="sliderg" class="mt-0" hide-details single-line type="number"></v-text-field>
-                      </v-flex> -->
-                      <v-flex xs10>
-                        <v-slider v-model="slidero" label="Office/Hausgebrauch/Schule" :max="maxo" :min="mino"></v-slider>
-                      </v-flex>
-                      <v-flex xs1 offset-xs1 style="width: 60px">
-                        <v-text-field v-model="slidero" class="mt-0" hide-details single-line type="number"></v-text-field>
-                      </v-flex>
-                      <v-flex xs10>
-                        <v-slider v-model="sliders" label="3D/CAD" :max="maxs" :min="mins"></v-slider>
-                      </v-flex>
-                      <v-flex xs1 offset-xs1 style="width: 60px">
-                        <v-text-field v-model="sliders" class="mt-0" hide-details single-line type="number"></v-text-field>
-                      </v-flex>
-                      <v-flex xs10>
-                        <v-slider v-model="sliders" label="Design" :max="maxs" :min="mins"></v-slider>
-                      </v-flex>
-                      <v-flex xs1 offset-xs1 style="width: 60px">
-                        <v-text-field v-model="sliders" class="mt-0" hide-details single-line type="number"></v-text-field>
-                      </v-flex>
-                      <v-flex xs10>
-                        <v-slider v-model="sliders" label="Budget" :max="maxs" :min="mins"></v-slider>
-                      </v-flex>
-                      <v-flex xs1 offset-xs1 style="width: 60px">
-                        <v-text-field v-model="sliders" class="mt-0" hide-details single-line type="number"></v-text-field>
+
+                      <v-flex xs12 v-for="slider in configSliders" :key="slider.id">
+                        <v-layout row>
+                          <v-flex xs10>
+                            <v-slider v-model="slider.slider" :label="slider.title" max="maxg" :min="ming"></v-slider>
+                          </v-flex>
+                          <v-flex xs1 offset-xs1 style="width: 60px">
+                            <v-text-field v-model="slider.slider" class="mt-0" hide-details single-line type="number"></v-text-field>
+                          </v-flex>
+                        </v-layout>
                       </v-flex>
                     </v-layout>
                   </v-card-text>
@@ -191,6 +170,13 @@ export default {
         { step: '2', name: 'Second Step' },
         { step: '3', name: 'Third Step' },
         { step: '4', name: 'Fourth Step' }
+      ],
+      configSliders: [
+        { id: '1', titile: 'Gaming', min: 'ming', max: 'maxg', slider: 'sliderg' },
+        { id: '2', titile: 'Office/Hausgebrauch/Schule', min: 'ming', max: 'maxg', slider: 'sliderg' },
+        { id: '3', titile: '3D/CAD', min: 'ming', max: 'maxg', slider: 'sliderg' },
+        { id: '4', titile: 'Design', min: 'ming', max: 'maxg', slider: 'sliderg' },
+        { id: '5', titile: 'Budget', min: 'ming', max: 'maxg', slider: 'sliderg' }
       ],
       partDescription: [
         { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' },

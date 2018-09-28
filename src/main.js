@@ -13,12 +13,14 @@ import AlertCmp from './components/Shared/Alert'
 import GoogleMaps from './components/Shared/GoogleMaps'
 import Meta from 'vue-meta'
 import CMSBar from './components/Shared/Edit/CMSBar'
+import VueAnime from 'vue-animejs'
 
 import EditNav from './views/EditPage/SideNav'
 
 Vue.config.productionTip = false
 
 Vue.use(VueParticles)
+Vue.use(VueAnime)
 Vue.use(Meta, {
   keyName: 'metaInfo'
 })
