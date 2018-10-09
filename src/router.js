@@ -67,7 +67,7 @@ const router = new Router({
       component: UnderConstructions
     },
     {
-      path: '/404',
+      path: '*',
       name: '404Error',
       component: PageOutError
     }

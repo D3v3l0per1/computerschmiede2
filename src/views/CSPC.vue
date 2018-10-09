@@ -46,13 +46,13 @@
                         <v-divider class="mt-2 mb-2"></v-divider>
                       </v-flex>
 
-                      <v-flex xs12 v-for="slider in configSliders" :key="slider.id">
+                      <v-flex xs12 v-for="slider in configSliders" :key="slider.slider">
                         <v-layout row>
                           <v-flex xs10>
-                            <v-slider v-model="slider.slider" :label="slider.title" max="maxg" :min="ming"></v-slider>
+                            <v-slider v-model="sliderg" label="Office" max="maxg" min="ming"></v-slider>
                           </v-flex>
                           <v-flex xs1 offset-xs1 style="width: 60px">
-                            <v-text-field v-model="slider.slider" class="mt-0" hide-details single-line type="number"></v-text-field>
+                            <v-text-field v-model="sliderg" class="mt-0" hide-details single-line type="number"></v-text-field>
                           </v-flex>
                         </v-layout>
                       </v-flex>
@@ -141,6 +141,7 @@
             </v-layout>
           </v-container>
         </v-flex>
+
       </v-layout>
     </v-container>
 
