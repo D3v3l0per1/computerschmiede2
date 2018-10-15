@@ -26,13 +26,13 @@
       <v-layout row wrap>
         <v-flex xs12 text-xs-center>
 
-          <!-- <v-card class="mb-5">
+          <v-card class="mb-5">
             <v-card-text>
               <h1 class="font-weight-regular mt-5 mb-5">Der Computer Konfigurator ist in Arbeit ;)</h1>
             </v-card-text>
-          </v-card> -->
+          </v-card>
 
-          <v-stepper v-model="e1">
+          <!-- <v-stepper v-model="e1">
             <v-stepper-header>
                 <v-stepper-step v-for="stepper in stepperItems" :key="stepper.name" :complete="e1 > stepper.step" :step="stepper.step">{{stepper.name}}</v-stepper-step>
             </v-stepper-header>
@@ -116,7 +116,7 @@
                 <v-btn flat @click="e1 = 1">Abbrechen</v-btn>
               </v-stepper-content>
             </v-stepper-items>
-          </v-stepper>
+          </v-stepper> -->
 
         </v-flex>
 

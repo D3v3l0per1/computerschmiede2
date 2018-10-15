@@ -74,6 +74,14 @@ const router = new Router({
   ]
 })
 
+router.beforeEach((to, from, next) => {
+  console.log('Loaded')
+  if (to.name) {
+    console.log('lol')
+  }
+  next()
+})
+
 // router.beforeResolve((to, from, next) => {
 //   console.log('Loaded')
 //   if (to.name) {
