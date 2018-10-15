@@ -4,7 +4,7 @@
       <v-toolbar-side-icon class="hidden-md-and-up white--text" @click="sideNav = !sideNav"></v-toolbar-side-icon>
       <v-toolbar-title class="hidden-sm-and-down">
         <router-link to="/">
-          <img src="@/assets/logoWhite-1.png" class="mt-2 main-logo" alt="">
+          <img src="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/home%2FlogoWhite-1.png?alt=media&token=ca251eca-3960-4d72-8cf8-a98f09c0a414" class="mt-2 main-logo" alt="">
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -13,11 +13,11 @@
       </v-toolbar-items>
     </v-toolbar>
 
-    <v-navigation-drawer v-model="sideNav" fixed dark>
+    <v-navigation-drawer v-model="sideNav" temporary fixed dark>
       <v-list>
         <v-list-tile class="custom-tile">
           <v-list-tile-content>
-            <img src="@/assets/logoWhite-1.png" style="width: 100%;" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/home%2FlogoWhite-1.png?alt=media&token=ca251eca-3960-4d72-8cf8-a98f09c0a414" style="width: 100%;" alt="">
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -45,7 +45,7 @@ export default {
       menuItems: [
         { title: 'Home', link: '/', icon: '' },
         { title: 'Über uns', link: '/ueber-uns', icon: '' },
-        { title: 'Computerschmiede PC', link: '/under_const', icon: '' },
+        { title: 'Computerschmiede PC', link: '/computerschmiede-pc', icon: '' },
         { title: '3D Druck', link: '/under_const', icon: '' },
         { title: 'Kontakt', link: '/kontakt', icon: '' }
       ]

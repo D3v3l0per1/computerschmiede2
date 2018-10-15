@@ -49,45 +49,45 @@ export default {
     return {
       parallax_items: [
         {
-          background: 'http://www.computerschmiede-jenbach.at/img/about_parallax/computerschmied_1.png',
+          background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Fparallax%2Fcomputerschmied_1.png?alt=media&token=8ba5577a-6d6d-4671-94a9-a7fa0348d5aa',
           class: 'offset-sm4 offset-md8',
-          icon: 'http://www.computerschmiede-jenbach.at/img/icons/icon-computerschmiede-1-1.png',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Ficons%2Ficon-computerschmiede-1-1.png?alt=media&token=876735db-f07f-4d1b-8a45-7b732700887f',
           title: 'Persönliche Beratung im Geschäft',
           text: 'Wir bieten persönliche, ehrliche und unabhängige Beratung rund um den Computer.'
         },
         {
-          background: 'http://www.computerschmiede-jenbach.at/img/about_parallax/computerschmied_7.png',
+          background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Fparallax%2Fcomputerschmied_7.png?alt=media&token=3121fc16-5fd0-414b-a1cf-ab4f38cc3f68',
           class: '',
-          icon: 'http://www.computerschmiede-jenbach.at/img/icons/icon-computerschmiede-2-1.png',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Ficons%2Ficon-computerschmiede-2-1.png?alt=media&token=f061f5c3-d567-45bc-aab5-d76620781486',
           title: 'Computer Service & EDV Dienstleistungen',
           text: 'Wir bieten bei anfallenden Servicefällen Rat und Information, sowie Hilfestellung für weitere Lösungsansätze. Gewisse Reparaturen werden in der hauseigenen Werkstatt durchgeführt.'
         },
         {
-          background: 'http://www.computerschmiede-jenbach.at/img/about_parallax/computerschmied_3.png',
+          background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Fparallax%2Fcomputerschmied_3.png?alt=media&token=1c896c0e-350a-45ff-a941-57990d86e03a',
           class: 'offset-sm4 offset-md8',
-          icon: 'http://www.computerschmiede-jenbach.at/img/icons/icon-computerschmiede-4-1.png',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Ficons%2Ficon-computerschmiede-4-1.png?alt=media&token=ec137379-ea10-421d-bae6-02eaf45cd439',
           title: 'Kompetentes Team mit langjähriger Erfahrungt',
           text: 'Wir stehen mit über 17 Jahren Erfahrung, bei Fragen rund um Produkte sowie bei Computerproblemen behilflich zur Seite.'
         },
         {
-          background: 'http://www.computerschmiede-jenbach.at/img/about_parallax/computerschmied_4.png',
+          background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Fparallax%2Fcomputerschmied_4.png?alt=media&token=e6ada9b1-ad6d-4011-8aa2-392c1af4b9fb',
           class: '',
-          icon: 'http://www.computerschmiede-jenbach.at/img/icons/icon-computerschmiede-5-1.png',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Ficons%2Ficon-computerschmiede-5-1.png?alt=media&token=21b50f74-4301-4a69-917c-72c8392a507b',
           title: 'Verwendung von qualitativ hochwertigen Markenprodukten',
           text: 'Bei der Auswahl von Hardware setzen wir auf qualitativ hochwertige Produkte.'
         },
         {
-          background: 'http://www.computerschmiede-jenbach.at/img/about_parallax/computerschmied_2.png',
+          background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Fparallax%2Fcomputerschmied_2.png?alt=media&token=b6ffbe8e-22fd-4d25-9d53-db66bf4de2a4',
           class: 'offset-sm4 offset-md8',
-          icon: 'http://www.computerschmiede-jenbach.at/img/icons/icon-computerschmiede-6-1.png',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Ficons%2Ficon-computerschmiede-6-1.png?alt=media&token=fc11f633-5beb-4a4a-8f80-e75dcb750944',
           title: 'Individuelle Lösungen und kostengünstige Varianten.',
           text: 'Wir beraten sie gerne individuell über Ihr neues PC-System und können ein ihren Anforderungen entsprechendes Produkt empfehlen.'
         },
         {
           
-          background: 'http://www.computerschmiede-jenbach.at/img/about_parallax/computerschmied_6.png',
+          background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Fparallax%2Fcomputerschmied_6.png?alt=media&token=bd4efb55-4dce-4925-88d0-75316e9e814b',
           class: '',
-          icon: 'http://www.computerschmiede-jenbach.at/img/icons/icon-computerschmiede-7-1.png',
+          icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Ficons%2Ficon-computerschmiede-7-1.png?alt=media&token=0bc9fce7-8043-4f0e-9e00-172935c5e589',
           title: 'Wir sind für Sie da - auch nach dem Kauf',
           text: 'Nicht nur beim Kauf, sondern auch im Servicefall stehen wir unseren Kunden mit Rat und Tat zur Seite und unterstützen sie gerne.'
         }
@@ -116,7 +116,7 @@ export default {
   }
 
   #particles-js {
-    background-image: url('http://www.computerschmiede-jenbach.at/img/07.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2F07.png?alt=media&token=62d5a6fe-d819-4043-b07e-05d71381cc35');
     background-repeat: repeat-x;
     height: 300px;
     border-bottom: 2px solid #d44040;

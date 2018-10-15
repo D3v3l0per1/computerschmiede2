@@ -74,16 +74,16 @@ const router = new Router({
   ]
 })
 
-router.beforeResolve((to, from, next) => {
-  console.log('Loaded')
-  if (to.name) {
-    NProgress.start()
-  }
-  next()
-})
+// router.beforeResolve((to, from, next) => {
+//   console.log('Loaded')
+//   if (to.name) {
+//     NProgress.start()
+//   }
+//   next()
+// })
 
-router.afterEach((to, from) => {
-  NProgress.done()
-})
+// router.afterEach((to, from) => {
+//   NProgress.done()
+// })
 
 export default router

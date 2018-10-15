@@ -28,7 +28,7 @@
 
 <style lang="scss">
   #particles-js {
-    background-image: url('http://www.computerschmiede-jenbach.at/img/wallpapper1.jpg');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/wallpapper1.jpg?alt=media&token=b45467c5-f10e-4f43-be9b-961f54eb0f55');
     background-repeat: repeat-x;
     // height: 100vh;
     border-bottom: 2px solid #3498db;

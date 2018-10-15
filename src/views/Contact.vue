@@ -25,7 +25,7 @@
 
     <v-layout row wrap>
       <v-flex xs12 sm6>
-        <v-parallax dark src="http://computerschmiede-jenbach.at/img/contact.jpg" height="800">
+        <v-parallax dark src="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/contact%2Fcontact.jpg?alt=media&token=cfaba22f-19d6-436f-8a35-e3c825818447" height="800">
           <v-layout align-center column justify-center>
             <v-container text-xs-center class="ma-5 contact-container">
               <h1 class="mb-2">Computerschmiede Jenbach</h1>
@@ -86,7 +86,7 @@
   }
 
   #particles-js {
-    background-image: url('http://www.computerschmiede-jenbach.at/img/wallpapper1.jpg');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/wallpapper1.jpg?alt=media&token=b45467c5-f10e-4f43-be9b-961f54eb0f55');
     background-repeat: repeat-x;
     height: 300px;
     border-bottom: 2px solid #3498db;

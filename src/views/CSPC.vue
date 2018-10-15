@@ -24,7 +24,13 @@
 
     <v-container>
       <v-layout row wrap>
-        <v-flex xs12>
+        <v-flex xs12 text-xs-center>
+
+          <!-- <v-card class="mb-5">
+            <v-card-text>
+              <h1 class="font-weight-regular mt-5 mb-5">Der Computer Konfigurator ist in Arbeit ;)</h1>
+            </v-card-text>
+          </v-card> -->
 
           <v-stepper v-model="e1">
             <v-stepper-header>
@@ -46,16 +52,17 @@
                         <v-divider class="mt-2 mb-2"></v-divider>
                       </v-flex>
 
-                      <v-flex xs12 v-for="slider in configSliders" :key="slider.slider">
-                        <v-layout row>
-                          <v-flex xs10>
-                            <v-slider v-model="sliderg" label="Office" max="maxg" min="ming"></v-slider>
+                      <v-flex xs12 v-for="slider in configSliders" :key="slider.id">
+                        <v-layout row wrap>
+                          <v-flex xs12 sm11>
+                            <v-slider :v-model="slider.slider" :label="slider.title" thumb-label step="10" ticks></v-slider>
                           </v-flex>
-                          <v-flex xs1 offset-xs1 style="width: 60px">
-                            <v-text-field v-model="sliderg" class="mt-0" hide-details single-line type="number"></v-text-field>
+                          <v-flex shrink style="width: 50px" class="ml-2 hidden-sm-and-down" text-xs-right>
+                            <v-text-field :v-model="slider.slider" class="mt-0"></v-text-field>
                           </v-flex>
                         </v-layout>
                       </v-flex>
+
                     </v-layout>
                   </v-card-text>
                 </v-card>
@@ -66,9 +73,29 @@
               </v-stepper-content>
 
               <v-stepper-content step="2">
-                <v-card class="mb-5" color="blue lighten-1" height="200px"></v-card>
+                <v-card class="mb-5">
+                  <v-container>
+                    <v-layout row wrap>
+                      <v-flex xs12 sm6 class="pa-1">
+                        <v-text-field label="Vorname" v-model="first_name"></v-text-field>
+                      </v-flex>
+                      <v-flex xs12 sm6 class="pa-1">
+                        <v-text-field label="Nachname" v-model="last_name"></v-text-field>
+                      </v-flex>
+                      <v-flex xs12 sm6 class="pa-1">
+                        <v-text-field label="E-Mail" v-model="email"></v-text-field>
+                      </v-flex>
+                      <v-flex xs12 sm6 class="pa-1">
+                        <v-text-field label="Telefonnummer" v-model="phone_number"></v-text-field>
+                      </v-flex>
+                      <v-flex xs12>
+                        <v-textarea label="Besondere Anmerkungen oder Wünsche?"></v-textarea>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-card>
 
-                <v-btn color="primary" @click="e1 = 3">Weiter</v-btn>
+                <v-btn color="primary" @click="e1 = 3">Beratung anfordern</v-btn>
 
                 <v-btn flat @click="e1 = 1">Abbrechen</v-btn>
               </v-stepper-content>
@@ -104,12 +131,12 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
                   </v-flex>
                   <v-flex xs12 sm6>
-                    <img src="@/assets/cpu.png" class="pl-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fcpu.png?alt=media&token=1378182f-1ff8-40f7-bff4-aad5847462e3" class="pl-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
                   </v-flex>
                 </v-layout>
                 <v-layout row wrap class="mb-4">
                   <v-flex xs12 sm6>
-                    <img src="@/assets/ram.png" class="pr-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fram.png?alt=media&token=11709ed7-3bb2-4ea2-a412-7e83a5136cbb" class="pr-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
                   </v-flex>
                   <v-flex xs12 sm6>
                     <h2>RAM (Arbeitsspeicher)</h2>
@@ -124,12 +151,12 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
                   </v-flex>
                   <v-flex xs12 sm6>
-                    <img src="@/assets/mainboard.png" class="pl-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fmainboard.png?alt=media&token=1fc08363-5994-4f47-a3c8-f5f9cd7bf61f" class="pl-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
                   </v-flex>
                 </v-layout>
                 <v-layout row wrap class="mb-4">
                   <v-flex xs12 sm6>
-                    <img src="@/assets/case.png" class="pr-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fcase.png?alt=media&token=600412d0-d398-40c2-be9b-3be6581f78ed" class="pr-5 mt-4" style="width: 100%; max-width: 550px;" alt="">
                   </v-flex>
                   <v-flex xs12 sm6>
                     <h2>Gehäuse</h2>
@@ -149,6 +176,7 @@
 </template>
 //  v-for="part in partDescription" :key="part.title"
 <script>
+
 export default {
   metaInfo: {
     title: 'Computerschmiede Jenbach',
@@ -156,28 +184,28 @@ export default {
   },  
   data () {
     return {
-      ming: 0,
-      maxg: 10,
+      first_name: null,
+      last_name: null,
+      email: null,
+      phone_number: null,
       sliderg: 0,
-      mino: 0,
-      maxo: 10,
       slidero: 0,
-      mins: 0,
-      maxs: 10,
-      sliders: 0,
+      sliderc: 0,
+      sliderd: 0,
+      sliderb: 0,
       e1: 1,
       stepperItems: [
-        { step: '1', name: 'First Step' },
-        { step: '2', name: 'Second Step' },
-        { step: '3', name: 'Third Step' },
-        { step: '4', name: 'Fourth Step' }
+        // { step: '1', name: 'Schritt 1' },
+        // { step: '2', name: 'Schritt 2' },
+        // { step: '3', name: 'Schritt 3' }
+        // { step: '4', name: 'Schritt 1' }
       ],
       configSliders: [
-        { id: '1', titile: 'Gaming', min: 'ming', max: 'maxg', slider: 'sliderg' },
-        { id: '2', titile: 'Office/Hausgebrauch/Schule', min: 'ming', max: 'maxg', slider: 'sliderg' },
-        { id: '3', titile: '3D/CAD', min: 'ming', max: 'maxg', slider: 'sliderg' },
-        { id: '4', titile: 'Design', min: 'ming', max: 'maxg', slider: 'sliderg' },
-        { id: '5', titile: 'Budget', min: 'ming', max: 'maxg', slider: 'sliderg' }
+        { id: '1', title: 'Gaming', slider: 'sliderg' },
+        { id: '2', title: 'Office/Schule', slider: 'slidero' },
+        { id: '3', title: '3D/CAD', slider: 'sliderc' },
+        { id: '4', title: 'Design', slider: 'sliderd' },
+        { id: '5', title: 'Budget', slider: 'sliderb' }
       ],
       partDescription: [
         { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' },
@@ -187,6 +215,11 @@ export default {
         { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' },
         { title: 'Mainboard', content: 'lorem ipsum dolor sit amet' }
       ]
+    }
+  },
+  methods: {
+    sendMail () {
+      
     }
   }
 }
@@ -215,7 +248,7 @@ export default {
   }
 
   #particles-js {
-    background-image: url('http://www.computerschmiede-jenbach.at/img/wallpapper1.jpg');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/wallpapper1.jpg?alt=media&token=b45467c5-f10e-4f43-be9b-961f54eb0f55');
     background-repeat: repeat-x;
     height: 300px;
     border-bottom: 2px solid #3498db;
