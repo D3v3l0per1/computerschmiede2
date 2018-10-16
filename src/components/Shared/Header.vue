@@ -46,7 +46,7 @@ export default {
         { title: 'Home', link: '/', icon: '' },
         { title: 'Über uns', link: '/ueber-uns', icon: '' },
         { title: 'Computerschmiede PC', link: '/computerschmiede-pc', icon: '' },
-        { title: '3D Druck', link: '/under_const', icon: '' },
+        { title: '3D Druck', link: '/3d-druck', icon: '' },
         { title: 'Kontakt', link: '/kontakt', icon: '' }
       ]
     }
