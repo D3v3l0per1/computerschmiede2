@@ -3,7 +3,9 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About'
 import CsPc from './views/CSPC'
-import ThreeDPrint from './views/3DPrint'
+import ThreeDPrints from './views/3DPrint/3DPrints'
+import ThreeDPrint from './views/3DPrint/3DPrint'
+import Create3DExample from './views/3DPrint/Create3DExample'
 import Contact from './views/Contact'
 import SignIn from './views/User/SignIn'
 import SignUp from './views/User/SignUp'
@@ -47,6 +49,16 @@ const router = new Router({
     },
     {
       path: '/3d-druck',
+      name: '3DPrints',
+      component: ThreeDPrints
+    },
+    {
+      path: '/3d-druck/neu',
+      name: 'Create3DExample',
+      component: Create3DExample
+    },
+    {
+      path: '/3d-druck/:id',
       name: '3DPrint',
       component: ThreeDPrint
     },

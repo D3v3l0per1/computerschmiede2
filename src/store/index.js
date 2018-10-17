@@ -12,7 +12,21 @@ export const store = new Vuex.Store({
     user: null,
     loading: false,
     error: null,
-    mailUser: null
+    mailUser: null,
+    threeDExamples: [
+      { 
+        id: '1',
+        title: 'AT ST Star Wars', author: 'jackbenimble',
+        author_link: 'https://www.thingiverse.com/jackbenimble',
+        model: 'https://app.modelo.io/embedded/rLn0H8IuPS?viewport=false&autoplay=true'
+      },
+      { 
+        id: '2',
+        title: 'Thanos (Avengers: Infinity War version)',
+        author: 'Byambaa', author_link: 'https://www.thingiverse.com/Byambaa',
+        model: 'https://app.modelo.io/embedded/JBDlptaXQ_?viewport=false&autoplay=true'
+      }
+    ]
   },
   mutations: {
     setUser (state, payload) {
@@ -77,37 +91,20 @@ export const store = new Vuex.Store({
     clearError ({commit}) {
       commit('clearError')
     },
-    // sendMail ({commit}, payload) {
-    //   commit('setLoading', true)
-    //   nodemailer.createTestAccount(() => {
-    //     let transporter = nodemailer.createTransport({
-    //       host: 'smtp.gmail.com',
-    //       port: 587,
-    //       secure: false,
-    //       auth: {
-    //         user: payload.user,
-    //         pass: payload.pass
-    //       }
-    //     })
-
-    //     let mailOptions = {
-    //       from: '"Fred Foo" <manuel.widmoser12@gmail.com',
-    //       to: 'bar@example.com',
-    //       subject: 'Hello World',
-    //       text: 'Fkn nigg',
-    //       html: '<b>Hello world?</b>'
-    //     }
-
-    //     transporter.sendMail(mailOptions, (error) => {
-    //       if (error) {
-    //         return console.log(error)
-    //       }
-    //       console.log('Message sent')
-    //     })
-    //   })
-    // }
   },
   getters: {
+    loaded3DExamples (state) {
+      return state.loaded3DExamples.sort((exmplA, exmplB) => {
+        return exmplA.date > exmplB.date
+      })
+    },
+    loaded3DExample (state) {
+      return (exmplId) => {
+        return state.loaded3DExamples.find((exmpl) => {
+          return exmpl.id === exmplId
+        })
+      }
+    },
     user (state) {
       return state.user
     },
