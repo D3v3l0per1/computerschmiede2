@@ -10,6 +10,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat v-for="item in menuItems" :key="item.title" :to="item.link">{{ item.title }}</v-btn>
+        <v-btn flat v-if="userIsAuthenticated" @click="onLogout">Logout</v-btn>
       </v-toolbar-items>
     </v-toolbar>
 
@@ -26,6 +27,9 @@
         <v-list-tile v-for="item in menuItems" :key="item.title" :to="item.link">
           <v-list-tile-content>{{item.title}}</v-list-tile-content>
         </v-list-tile>
+        <v-list-tile @click="onLogout" v-if="userIsAuthenticated">
+          <v-list-tile-content>Abmelden</v-list-tile-content>
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
   </header>
@@ -41,14 +45,38 @@
 export default {
   data () {
     return {
-      sideNav: false,
-      menuItems: [
+      sideNav: false
+    }
+  },
+  computed: {
+    menuItems () {
+      let menuItems = [
         { title: 'Home', link: '/', icon: '' },
         { title: 'Über uns', link: '/ueber-uns', icon: '' },
         { title: 'Computerschmiede PC', link: '/computerschmiede-pc', icon: '' },
         { title: '3D Druck', link: '/3d-druck', icon: '' },
-        { title: 'Kontakt', link: '/kontakt', icon: '' }
+        { title: 'Kontakt', link: '/kontakt', icon: '' },
+        { title: 'Anmelden', link: '/signin', icon: '' }
       ]
+      if (this.userIsAuthenticated) {
+        menuItems = [
+          { title: 'Home', link: '/', icon: '' },
+          { title: 'Über uns', link: '/ueber-uns', icon: '' },
+          { title: 'Computerschmiede PC', link: '/computerschmiede-pc', icon: '' },
+          { title: '3D Druck', link: '/3d-druck', icon: '' },
+          { title: 'Kontakt', link: '/kontakt', icon: '' },
+          { title: 'Profil', link: '/profil', icon: '' }
+        ]
+      }
+      return menuItems
+    },
+    userIsAuthenticated () {
+      return this.$store.getters.user !== null && this.$store.getters.user !== undefined
+    }
+  },
+  methods: {
+    onLogout () {
+      this.$store.dispatch('logout')
     }
   }
 }

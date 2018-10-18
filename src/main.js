@@ -14,6 +14,7 @@ import GoogleMaps from './components/Shared/GoogleMaps'
 import Meta from 'vue-meta'
 import CMSBar from './components/Shared/Edit/CMSBar'
 import VueAnime from 'vue-animejs'
+import DateFilter from './filters/date'
 
 import EditNav from './views/EditPage/SideNav'
 
@@ -33,6 +34,8 @@ Vue.component('google-maps', GoogleMaps)
 Vue.component('app-cms-bar', CMSBar)
 Vue.component('app-edit-sidenav', EditNav)
 
+Vue.filter('date', DateFilter)
+
 new Vue({
   router,
   store,
@@ -46,5 +49,11 @@ new Vue({
       storageBucket: "computerschmiede-jenbach.appspot.com",
       messagingSenderId: "539826549672"
     })
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.$store.dispatch('autoSignIn', user)
+      }
+    })
+    this.$store.dispatch('load3DExamples')
   }
 }).$mount('#app')

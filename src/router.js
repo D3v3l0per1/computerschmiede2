@@ -55,11 +55,13 @@ const router = new Router({
     {
       path: '/3d-druck/neu',
       name: 'Create3DExample',
-      component: Create3DExample
+      component: Create3DExample,
+      beforeEnter: authGuard
     },
     {
       path: '/3d-druck/:id',
       name: '3DPrint',
+      props: true,
       component: ThreeDPrint
     },
     {

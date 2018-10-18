@@ -25,6 +25,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  metaInfo: {
+    title: 'Computerschmiede Jenbach',
+    titleTemplate: 'Under Constructions | %s'
+  },
+}
+</script>
+
+
 <style lang="scss">
   #particles-js {
     background-image: url('https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/wallpapper1.jpg?alt=media&token=b45467c5-f10e-4f43-be9b-961f54eb0f55');
