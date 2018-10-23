@@ -19,6 +19,10 @@
               <v-icon>keyboard_arrow_left</v-icon>
             </v-btn>
             <h1 class="font-weight-regular blue--text ml-3">{{ThreeDExample.title}}</h1>
+            <template v-if="userIsCreator">
+              <v-spacer></v-spacer>
+              <app-edit-3dexample-dialog :threeDExample="ThreeDExample"></app-edit-3dexample-dialog>
+            </template>
           </v-card-title>
 
           <v-divider></v-divider>
@@ -50,7 +54,7 @@
               <v-icon>chevron_left</v-icon>
             </v-btn>
             <v-spacer></v-spacer>
-            <v-btn flat @click="step++" :disabled="step === 3">
+            <v-btn flat @click="step++" :disabled="step === 2">
               <v-icon>chevron_right</v-icon>
             </v-btn>
           </v-card-actions>
@@ -91,12 +95,21 @@ export default {
     currentTitle () {
       switch (this.step) {
         case 1: return 'test 1'
-        case 2: return 'test 2'
-        default: return 'test 3'
+        // case 2: return 'test 2'
+        default: return 'test 2'
       }
     },
     loading () {
       return this.$store.getters.loading
+    },
+    userIsAuthenticated () {
+      return this.$store.getters.user !== null && this.$store.getters.user !== undefined
+    },
+    userIsCreator () {
+      if (!this.userIsAuthenticated) {
+        return false
+      }
+      return this.$store.getters.user.id === this.ThreeDExample.creatorId
     }
   },
   metaInfo: {

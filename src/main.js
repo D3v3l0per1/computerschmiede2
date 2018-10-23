@@ -14,6 +14,7 @@ import GoogleMaps from './components/Shared/GoogleMaps'
 import Meta from 'vue-meta'
 import CMSBar from './components/Shared/Edit/CMSBar'
 import VueAnime from 'vue-animejs'
+import EditThreeDExampleDialog from './views/3DPrint/Edit/EditThreeDExampleDetailsDialog.vue'
 
 import DateFilter from './filters/date'
 
@@ -31,6 +32,7 @@ Vue.component('Header', Header)
 Vue.component('Footer', Footer)
 Vue.component('app-alert', AlertCmp)
 Vue.component('google-maps', GoogleMaps)
+Vue.component('app-edit-3dexample-dialog', EditThreeDExampleDialog)
 
 Vue.component('app-cms-bar', CMSBar)
 Vue.component('app-edit-sidenav', EditNav)

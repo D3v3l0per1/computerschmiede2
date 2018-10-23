@@ -32,6 +32,17 @@ export default {
     },
     create3DExample (state, payload) {
       state.loaded3DExamples.push(payload)
+    },
+    update3DExample (state, payload){
+      const exmpl = state.loaded3DExamples.find(exmpl => {
+        return exmpl.id === payload.id
+      })
+      if (payload.title) {
+        exmpl.title = payload.title
+      }
+      if (payload.description) {
+        exmpl.description = payload.description
+      }
     }
   },
   actions: {
@@ -121,6 +132,29 @@ export default {
             console.log(error)
           }
         )
+    },
+    updateThreeDExampleData ({commit}, payload) {
+      commit('setLoading', true)
+      const updateObj = {}
+      if (payload.title) {
+        updateObj.title = payload.title
+      }
+      if (payload.description) {
+        updateObj.description = payload.description
+      }
+      firebase.database().ref('3d_examples').child(payload.id).update(updateObj)
+      .then(
+        () => {
+          commit('setLoading', false)
+          commit('update3DExample', payload)
+        }
+      )
+      .catch(
+        (error) => {
+          console.log(error)
+          commit('setLoading', false)
+        }
+      )
     }
   },
   getters: {
