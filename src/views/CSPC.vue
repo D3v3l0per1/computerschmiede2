@@ -128,7 +128,7 @@
                   <v-flex xs12 sm6>
                     <h2>CPU (Prozessor)</h2>
                     <v-divider class="mb-2 mt-1"></v-divider>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit illo quos nulla, quod laudantium voluptates in consequuntur architecto deleniti libero dignissimos provident a hic? Quod dolores enim exercitationem non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum hic laborum nulla omnis quasi blanditiis. Eos nemo qui est? Dolor sed in temporibus maiores. Voluptatum impedit facilis similique quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere omnis voluptatem quasi pariatur, consequuntur officia. Distinctio aliquid, omnis doloremque amet at, quaerat delectus, ab velit nemo rerum dolorem consequatur.</p>
+                    <p></p>
                   </v-flex>
                   <v-flex xs12 sm6>
                     <img src="https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/cspc%2Fcpu.png?alt=media&token=1378182f-1ff8-40f7-bff4-aad5847462e3" class="pl-5 mt-4" style="width: 100%; max-width: 550px;" alt="">

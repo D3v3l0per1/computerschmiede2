@@ -66,7 +66,7 @@ export default {
           background: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Fparallax%2Fcomputerschmied_3.png?alt=media&token=1c896c0e-350a-45ff-a941-57990d86e03a',
           class: 'offset-sm4 offset-md8',
           icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Ficons%2Ficon-computerschmiede-4-1.png?alt=media&token=ec137379-ea10-421d-bae6-02eaf45cd439',
-          title: 'Kompetentes Team mit langjähriger Erfahrungt',
+          title: 'Kompetentes Team mit langjähriger Erfahrung',
           text: 'Wir stehen mit über 17 Jahren Erfahrung, bei Fragen rund um Produkte sowie bei Computerproblemen behilflich zur Seite.'
         },
         {
@@ -81,7 +81,7 @@ export default {
           class: 'offset-sm4 offset-md8',
           icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Ficons%2Ficon-computerschmiede-6-1.png?alt=media&token=fc11f633-5beb-4a4a-8f80-e75dcb750944',
           title: 'Individuelle Lösungen und kostengünstige Varianten.',
-          text: 'Wir beraten sie gerne individuell über Ihr neues PC-System und können ein ihren Anforderungen entsprechendes Produkt empfehlen.'
+          text: 'Wir beraten Sie gerne individuell über Ihr neues PC-System und können ein ihren Anforderungen entsprechendes Produkt empfehlen.'
         },
         {
           
@@ -89,7 +89,7 @@ export default {
           class: '',
           icon: 'https://firebasestorage.googleapis.com/v0/b/computerschmiede-jenbach.appspot.com/o/about%2Ficons%2Ficon-computerschmiede-7-1.png?alt=media&token=0bc9fce7-8043-4f0e-9e00-172935c5e589',
           title: 'Wir sind für Sie da - auch nach dem Kauf',
-          text: 'Nicht nur beim Kauf, sondern auch im Servicefall stehen wir unseren Kunden mit Rat und Tat zur Seite und unterstützen sie gerne.'
+          text: 'Nicht nur beim Kauf, sondern auch im Servicefall stehen wir unseren Kunden mit Rat und Tat zur Seite und unterstützen Sie gerne.'
         }
       ]
     }

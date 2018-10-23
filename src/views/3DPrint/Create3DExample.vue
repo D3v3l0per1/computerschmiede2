@@ -25,20 +25,34 @@
             <v-divider></v-divider>
             <v-card-text>
               <v-layout row wrap>
-                <v-flex xs12 sm6>
+                <v-flex xs12 sm6 class="pa-3">
                   <v-layout row wrap>
-                    <v-flex xs12>
-                      <img :src="imageUrl" style="width: 100%:" alt="">
+                    <v-flex xs12 class="pa-2">
+                      <h2 class="font-weight-regular grey--text text--darken-1 mb-3">Titelbild / Thumbnail</h2>
+                      <img v-if="imageUrl === ''" src="https://dummyimage.com/1920x1080/eee/aaa" style="width: 100%; border: 2px solid #ccc; border-radius: 5px;" alt="">
+                      <img v-else :src="imageUrl" style="width: 90%; border: 2px solid #ccc; border-radius: 5px;" class=" ma-3" alt="">
                     </v-flex>
-                      <v-flex xs12>
-                      <v-text-field name="imageUrl" label="Bild URL" v-model="imageUrl" id="imageUrl" required></v-text-field>
+                    <v-flex xs12>
+                      <v-layout row wrap>
+                        <v-flex xs12 sm6 class="pa-2">
+                          <img src="https://dummyimage.com/1920x1080/eee/aaa" style="width: 100%; border: 2px solid #ccc; border-radius: 5px;" alt="">
+                        </v-flex>
+                        <v-flex xs12 sm6 class="pa-2">
+                          <img src="https://dummyimage.com/1920x1080/eee/aaa" style="width: 100%; border: 2px solid #ccc; border-radius: 5px;" alt="">
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
+                    <v-flex xs12 text-xs-center class="ma-3">
+                      <v-btn raised class="blue lighten-2" dark @click="onPickFile">Bilder Hochladen</v-btn>
+                      <input type="file" style="display:none;" ref="fileInput" accept="image/*" @change="onFilePicked">
                     </v-flex>
                   </v-layout>
                 </v-flex>
-                <v-flex xs12 sm6>
+                <v-flex xs12 sm6 class="pa-3">
                   <v-layout row wrap>
-                    <v-flex xs12>
-                      <iframe :src="'https://app.modelo.io/embedded/' + model_id + '?viewport=false&autoplay=true'" width="100%" height="500px" frameborder="0"></iframe>
+                    <v-flex xs12 class="pa-2">
+                      <h2 class="font-weight-regular grey--text text--darken-1 mb-3">3D Modell Preview</h2>
+                      <iframe :src="'https://app.modelo.io/embedded/' + model_id + '?viewport=false&autoplay=true'" width="100%" height="500px" style="border: 2px solid #ccc; border-radius: 5px;"></iframe>
                     </v-flex>
                     <v-flex xs12>
                       <v-text-field name="model_id" label="Model ID" v-model="model_id" id="model_id" required></v-text-field>
@@ -85,7 +99,8 @@ export default {
       author: '',
       author_link: '',
       description: '',
-      date: new Date()
+      date: new Date(),
+      image: null
     }
   },
   computed: {
@@ -98,6 +113,9 @@ export default {
       if (!this.formIsValid) {
         return
       }
+      if (!this.image) {
+        return
+      }
       const exmplData = {
         title: this.title,
         imageUrl: this.imageUrl,
@@ -105,10 +123,27 @@ export default {
         author: this.author,
         author_link: this.author_link,
         description: this.description,
-        date: new Date().toISOString()
+        date: new Date().toISOString(),
+        image: this.image
       }
       this.$store.dispatch('create3DExample', exmplData)
       this.$router.push('/3d-druck')
+    },
+    onPickFile () {
+      this.$refs.fileInput.click()
+    },
+    onFilePicked (event) {
+      const files = event.target.files
+      let filename = files[0].name
+      if (filename.lastIndexOf('.') <= 0) {
+        return alert('Bitte ein gültiges Bild wählen')
+      }
+      const fileReader = new FileReader()
+      fileReader.addEventListener('load', () => {
+        this.imageUrl = fileReader.result
+      })
+      fileReader.readAsDataURL(files[0])
+      this.image = files[0]
     }
   }
 }

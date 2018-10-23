@@ -14,6 +14,7 @@ import GoogleMaps from './components/Shared/GoogleMaps'
 import Meta from 'vue-meta'
 import CMSBar from './components/Shared/Edit/CMSBar'
 import VueAnime from 'vue-animejs'
+
 import DateFilter from './filters/date'
 
 import EditNav from './views/EditPage/SideNav'

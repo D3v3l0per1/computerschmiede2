@@ -27,14 +27,14 @@
             <v-window-item :value="1">
               <v-card flat>
                 <v-card-text>
-                  <iframe :src="'https://app.modelo.io/embedded/' + ThreeDExample.model_id + '?viewport=false&autoplay=true'" allowfullscreen width="100%" height="500px" frameborder="0"></iframe>
+                  <iframe :src="'https://app.modelo.io/embedded/' + ThreeDExample.model_id + '?viewport=true&autoplay=true'" allowfullscreen width="100%" height="500px" frameborder="0"></iframe>
                 </v-card-text>
               </v-card>
             </v-window-item>
 
             <v-window-item :value="2">
               <v-card flat>
-                <img src="https://via.placeholder.com/1920x1080" style="width: 100%;" alt="">
+                <img :src="ThreeDExample.imageUrl" style="width: 100%;" alt="">
               </v-card>
             </v-window-item>
 
@@ -62,7 +62,7 @@
               <span class="font-italic grey--text">Geposted von sad_boi am {{ ThreeDExample.date | date }}</span> <br>
               Model erstellt von <a :href="ThreeDExample.author_link">{{ThreeDExample.author}}</a>
             </p>
-            <p>{{ThreeDExample.description}}</p>
+            <p style="white-space: pre;">{{ThreeDExample.description}}</p>
           </v-card-text>
 
           <v-divider></v-divider>
@@ -83,8 +83,6 @@ export default {
   props: ['id'],
   data: () => ({
     step: 1
-    // length: 3,
-    // onboarding: 0
   }),
   computed: {
     ThreeDExample () {
@@ -101,14 +99,6 @@ export default {
       return this.$store.getters.loading
     }
   },
-  // methods: {
-  //   next () {
-  //     this.onboarding = this.onboarding + 1 === length ? 0 : this.onboarding + 1
-  //   },
-  //   prev () {
-  //     this.onboarding = this.onboarding - 1 < 0 ? this.length -1 : this.onboarding -1
-  //   }
-  // },
   metaInfo: {
     title: 'Computerschmiede Jenbach',
     titleTemplate: '3D-Druck | %s'

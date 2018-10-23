@@ -1,8 +1,8 @@
 <template>
   <v-layout row wrap>
     <v-flex xs12>
-      <div class="clearfix blue lighten-2" style="height: 400px;"></div>
       
+      <div class="clearfix blue lighten-2" style="height: 400px;"></div>
     </v-flex>
 
     <v-flex xs12>
@@ -38,15 +38,15 @@
                 <v-layout row wrap>
                   <v-flex xs12>
                     <img :src="item.imageUrl" style="width: 100%;" alt="">
-                    <p>{{item.title}}<span> by </span> <a :href="item.author_link" target="_blank">{{item.author}}</a><br>
-                      <span class="grey--text font-italic">Gepostet am {{item.date | date}}</span></p>
+                    <p><span class="grey--text font-italic">Gepostet am {{item.date | date}}</span><br>
+                      {{item.title}}<span> by </span> <a :href="item.author_link" target="_blank">{{item.author}}</a></p>
                   </v-flex>
                 </v-layout>
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn class="blue lighten-2" dark :to="'/3d-druck/' + item.id">View More</v-btn>
+                <v-btn class="blue lighten-2" dark :to="'/3d-druck/' + item.id">Mehr</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
