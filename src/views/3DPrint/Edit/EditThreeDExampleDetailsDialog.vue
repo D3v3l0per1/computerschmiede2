@@ -16,7 +16,13 @@
         <v-card-text>
           <v-flex xs12>
             <v-text-field name="title" label="Titel" v-model="editedTitle" id="title" required></v-text-field>
-             <v-textarea name="description" label="Beschreibung" v-model="editedDescription" id="description" required></v-textarea>
+          </v-flex>
+          <!-- <v-flex xs12 sm6>
+            <h3 class="font-weight-regular mb-1">Titelbild</h3>
+            <img style="width: 100%; border: 2px solid #ccc; border-radius: 5px;" :src="editedImage" alt="">
+          </v-flex> -->
+          <v-flex xs12>
+            <v-textarea name="description" label="Beschreibung" v-model="editedDescription" id="description" required></v-textarea>
           </v-flex>
         </v-card-text>
 
@@ -42,7 +48,8 @@ export default {
     return {
       editDialog: false,
       editedTitle: this.threeDExample.title,
-      editedDescription: this.threeDExample.description
+      editedDescription: this.threeDExample.description,
+      // editedImage: this.threeDExample.imageUrl
     }
   },
   methods: {
@@ -54,7 +61,8 @@ export default {
       this.$store.dispatch('updateThreeDExampleData', {
         id: this.threeDExample.id,
         title: this.editedTitle,
-        description: this.editedDescription
+        description: this.editedDescription,
+        // imageUrl: this.editedImage
       })
     }
   }

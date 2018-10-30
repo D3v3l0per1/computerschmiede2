@@ -23,7 +23,16 @@ export default {
         imageUrl: 'https://via.placeholder.com/1920x800',
         description: 'Lorem ispsumsdn lisdfng liksdfngöosn rffl.g n.kgd jlnöskfdg nh'
       },
-      
+    ],
+    loadedApplied3DExample: [
+      {
+        id: '9',
+        email: 'manuel.widmoer12@gmail.com',
+        phone: '4393409340349',
+        color: 'red',
+        print_quality: 'standard',
+        fileUrl: 'lsdfihliöasrdhfvöoisndfvr'
+      }
     ]
   },
   mutations: {
@@ -43,9 +52,35 @@ export default {
       if (payload.description) {
         exmpl.description = payload.description
       }
+    },
+    setLoadedApplied3DExample (state, payload) {
+      state.loadedApplied3DExample = payload
+    },
+    createApplie3DExample (state, payload) {
+      state.loadedApplied3DExample.push(payload)
     }
   },
   actions: {
+    createApplie3DExample ({commit}, payload) {
+      const applyObj = {
+        email: payload.email,
+        phone: payload.phone,
+        // color: this.color,
+        // print_quality: this.print_quality,
+        // file: this.file
+      }
+      firebase.database().ref('3d_examples_appliement').push(applyObj)
+        .then(
+          () => {
+            commit('setLoadedApplied3DExample', applyObj)
+          }
+        )
+        .catch(
+          error => {
+            console.log(error)
+          }
+        )
+    },
     load3DExamples ({commit}) {
       commit('setLoading', true)
       firebase.database().ref('3d_examples').once('value')

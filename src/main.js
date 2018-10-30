@@ -15,6 +15,7 @@ import Meta from 'vue-meta'
 import CMSBar from './components/Shared/Edit/CMSBar'
 import VueAnime from 'vue-animejs'
 import EditThreeDExampleDialog from './views/3DPrint/Edit/EditThreeDExampleDetailsDialog.vue'
+import SignUpOn3DPrint from './views/3DPrint/Edit/3DPrintSignUp'
 
 import DateFilter from './filters/date'
 
@@ -33,6 +34,7 @@ Vue.component('Footer', Footer)
 Vue.component('app-alert', AlertCmp)
 Vue.component('google-maps', GoogleMaps)
 Vue.component('app-edit-3dexample-dialog', EditThreeDExampleDialog)
+Vue.component('app-register-on-3d-example', SignUpOn3DPrint)
 
 Vue.component('app-cms-bar', CMSBar)
 Vue.component('app-edit-sidenav', EditNav)

@@ -65,7 +65,7 @@ export default {
           { title: 'Computerschmiede PC', link: '/computerschmiede-pc', icon: '' },
           { title: '3D Druck', link: '/3d-druck', icon: '' },
           { title: 'Kontakt', link: '/kontakt', icon: '' },
-          { title: 'Profil', link: '/profil', icon: '' }
+          { title: 'Admin Panel', link: '/panel', icon: '' }
         ]
       }
       return menuItems

@@ -10,6 +10,25 @@
         <v-layout row wrap>
 
           <v-flex xs12>
+            <v-responsive>
+
+              <h3 class="display-3">Wilkommen auf der 3D Druck Seite</h3>
+
+              <span class="subheading">Sie haben die Möglichkeit hier Ihre 3D Datei hochzuladen, die Sie ausdrucken wollen und wir senen Ihnen einen Kostenvoranschlag und ob es möglich ist Sie zu drucken :)</span>
+
+              <v-divider class="my-3"></v-divider>
+
+              <v-flex xs12 sm8 offset-sm2 text-xs-center class="mt-4 mb-5">
+                <!-- <v-btn dark class="blue lighten-2" large block>Uploaden</v-btn> -->
+                <template>
+                  <app-register-on-3d-example></app-register-on-3d-example>
+                </template>
+              </v-flex>
+
+            </v-responsive>
+          </v-flex>
+
+          <v-flex xs12>
             <h1 class="font-weight-regular">Beispiele</h1>
             <hr class="mb-3">
           </v-flex>

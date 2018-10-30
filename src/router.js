@@ -9,6 +9,7 @@ import Create3DExample from './views/3DPrint/Create3DExample'
 import Contact from './views/Contact'
 import SignIn from './views/User/SignIn'
 import SignUp from './views/User/SignUp'
+import AdminPanel from './views/User/Panel' 
 
 import EditPage from './views/EditPage/Home'
 
@@ -41,6 +42,11 @@ const router = new Router({
       path: '/signup',
       name: 'SignUp',
       component: SignUp
+    },
+    {
+      path: '/panel',
+      name: 'AdminPanel',
+      component: AdminPanel
     },
     {
       path: '/computerschmiede-pc',

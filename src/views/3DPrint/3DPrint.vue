@@ -71,10 +71,10 @@
 
           <v-divider></v-divider>
 
-          <v-card-actions>
+          <!-- <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn dark class="blue lighten-2">Like it</v-btn>
-          </v-card-actions>
+          </v-card-actions> -->
         </v-card>
 
       </v-flex>
