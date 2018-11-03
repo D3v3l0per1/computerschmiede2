@@ -29,13 +29,20 @@
               </v-flex>
               <v-flex xs12 class="pr-3 pl-3">
                 <h3 class="headline">Druckqualität</h3>
-                <v-slider v-model="quality" :tick-labels="ticksLabelsQuality" :max="2" step="1" ticks="always" tick-size="2"></v-slider>
+                {{ticksLabelsQualities.value}}
+                
+                <v-slider v-model="quality" :tick-labels="ticksLabelsQualities" :max="2" step="1" ticks="always" tick-size="2"></v-slider>
               </v-flex>
               <v-flex xs12 class="pr-3 pl-3">
                 <v-btn color="accent" block>Datei hochladen</v-btn>
               </v-flex>
               <v-flex xs12>
                 <small>* Telefonnummer optional für schnellere Reaktionszeit angeben </small>
+              </v-flex>
+              <v-flex xs12>
+                <p>
+                  
+                </p>
               </v-flex>
             </v-layout>
           </v-card-text>
@@ -64,7 +71,7 @@ export default {
         'schwarzes PLA, matt',
         'andere'
       ],
-      ticksLabelsQuality: [
+      ticksLabelsQualities: [
         'Fein',
         'Standard',
         'Entwurf'
@@ -96,6 +103,9 @@ export default {
       console.log(applyExmpl)
       this.$store.dispatch('createApplie3DExample', applyExmpl)
       // this.signUpDialog = false
+    },
+    ticksLabelsQuality (val) {
+      return this.ticksLabelsQuality[val]
     }
   }
 }

@@ -61,6 +61,30 @@ export default {
     }
   },
   actions: {
+    loadedApplied3DExample ({commit}) {
+      commit('setLoading', true)
+      firebase.database().ref('3d_examples_appliement').once('value')
+        .then(
+          (data) => {
+            const appliements = []
+            const obj = data.val()
+            for (let key in obj) {
+              appliements.push({
+                id: key,
+                email: obj[key].email,
+                phone: obj[key].phone
+              }) 
+            }
+            commit('setLoading', false)
+            commit('setLoadedApplied3DExample', appliements)
+          }
+        )
+        .catch(
+          (error) => {
+            console.log(error)
+          }
+        )
+    },
     createApplie3DExample ({commit}, payload) {
       const applyObj = {
         email: payload.email,
@@ -193,6 +217,11 @@ export default {
     }
   },
   getters: {
+    loadedApplied3DExample (state) {
+      return state.loadedApplied3DExample.sort((applyA, applyB) => {
+        return applyA.date > applyB.date
+      })
+    },
     loaded3DExamples (state) {
       return state.loaded3DExamples.sort((exmplA, exmplB) => {
         return exmplA.date > exmplB.date

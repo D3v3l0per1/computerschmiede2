@@ -10,6 +10,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat v-for="item in menuItems" :key="item.title" :to="item.link">{{ item.title }}</v-btn>
+        <!-- <v-divider dark vertical></v-divider> -->
         <v-btn flat v-if="userIsAuthenticated" @click="onLogout">Logout</v-btn>
       </v-toolbar-items>
     </v-toolbar>

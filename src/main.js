@@ -18,6 +18,7 @@ import EditThreeDExampleDialog from './views/3DPrint/Edit/EditThreeDExampleDetai
 import SignUpOn3DPrint from './views/3DPrint/Edit/3DPrintSignUp'
 
 import DateFilter from './filters/date'
+import IdFilter from './filters/id_filter'
 
 import EditNav from './views/EditPage/SideNav'
 
@@ -40,6 +41,7 @@ Vue.component('app-cms-bar', CMSBar)
 Vue.component('app-edit-sidenav', EditNav)
 
 Vue.filter('date', DateFilter)
+Vue.filter('id_filter', IdFilter)
 
 new Vue({
   router,
@@ -60,5 +62,6 @@ new Vue({
       }
     })
     this.$store.dispatch('load3DExamples')
+    this.$store.dispatch('loadedApplied3DExample')
   }
 }).$mount('#app')
