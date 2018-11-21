@@ -14,8 +14,11 @@ import GoogleMaps from './components/Shared/GoogleMaps'
 import Meta from 'vue-meta'
 import CMSBar from './components/Shared/Edit/CMSBar'
 import VueAnime from 'vue-animejs'
+import CreateBlockDialog from './views/CSPC/CreateBlockDialog'
+import EditBlockDialog from './views/CSPC/EditBlockDialog'
 import EditThreeDExampleDialog from './views/3DPrint/Edit/EditThreeDExampleDetailsDialog.vue'
 import SignUpOn3DPrint from './views/3DPrint/Edit/3DPrintSignUp'
+import ParticlesBaseHeader from './components/Shared/ParticleBaseHeader'
 
 import DateFilter from './filters/date'
 import IdFilter from './filters/id_filter'
@@ -34,8 +37,11 @@ Vue.component('Header', Header)
 Vue.component('Footer', Footer)
 Vue.component('app-alert', AlertCmp)
 Vue.component('google-maps', GoogleMaps)
+Vue.component('app-create-cspc-block-dialog', CreateBlockDialog)
+Vue.component('app-edit-block-dialog', EditBlockDialog)
 Vue.component('app-edit-3dexample-dialog', EditThreeDExampleDialog)
 Vue.component('app-register-on-3d-example', SignUpOn3DPrint)
+Vue.component('app-particles-base-header', ParticlesBaseHeader)
 
 Vue.component('app-cms-bar', CMSBar)
 Vue.component('app-edit-sidenav', EditNav)
@@ -62,6 +68,7 @@ new Vue({
       }
     })
     this.$store.dispatch('load3DExamples')
+    this.$store.dispatch('loadBlocks')
     this.$store.dispatch('loadedApplied3DExample')
   }
 }).$mount('#app')
