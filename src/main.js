@@ -16,6 +16,7 @@ import CMSBar from './components/Shared/Edit/CMSBar'
 import VueAnime from 'vue-animejs'
 import CreateBlockDialog from './views/CSPC/CreateBlockDialog'
 import EditBlockDialog from './views/CSPC/EditBlockDialog'
+import DeleteBlockDialog from './views/CSPC/DeleteBlockDialog'
 import EditThreeDExampleDialog from './views/3DPrint/Edit/EditThreeDExampleDetailsDialog.vue'
 import SignUpOn3DPrint from './views/3DPrint/Edit/3DPrintSignUp'
 import ParticlesBaseHeader from './components/Shared/ParticleBaseHeader'
@@ -39,6 +40,7 @@ Vue.component('app-alert', AlertCmp)
 Vue.component('google-maps', GoogleMaps)
 Vue.component('app-create-cspc-block-dialog', CreateBlockDialog)
 Vue.component('app-edit-block-dialog', EditBlockDialog)
+Vue.component('app-delete-block-dialog', DeleteBlockDialog)
 Vue.component('app-edit-3dexample-dialog', EditThreeDExampleDialog)
 Vue.component('app-register-on-3d-example', SignUpOn3DPrint)
 Vue.component('app-particles-base-header', ParticlesBaseHeader)

@@ -52,7 +52,7 @@
                       
                       <!-- Create Button -->
                       <v-flex xs12 sm1 text-xs-center text-sm-right>
-                        <v-btn class="primary" large :disabled="!formIsValid" type="submit">Erstellen</v-btn>
+                        <v-btn class="primary" large type="submit">Erstellen</v-btn>
                       </v-flex>
                       <!-- End Content Part -->
 
@@ -71,7 +71,7 @@
         
         <v-card-actions>
           <v-flex xs12>
-            <v-btn flat class="red--text darken-1" @click="createDialog = false">Schließen</v-btn>
+            <v-btn flat class="red--text darken-1" @click="editDialog = false">Schließen</v-btn>
           </v-flex>
         </v-card-actions>
 

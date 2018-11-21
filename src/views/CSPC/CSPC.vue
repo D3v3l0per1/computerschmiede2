@@ -62,7 +62,8 @@
 
                     <!-- Start Edit Button -->
                     <v-flex xs12 text-xs-right>
-                      <app-edit-block-dialog :block="block"></app-edit-block-dialog>
+                      <v-btn class="custom-tool-cta red" dark fab small depressed><v-icon>clear</v-icon></v-btn>
+                      <!-- <app-edit-block-dialog :block="block"></app-edit-block-dialog> -->
                     </v-flex>
                     <!-- End Edit Button -->
                 
@@ -90,9 +91,9 @@ export default {
     titleTemplate: 'Computerschmiede PC | %s'
   },
   computed: {
-    block () {
-      this.$store.getters.loadedBlock
-    },
+    // block () {
+    //   this.$store.getters.loadedBlock
+    // },
     blocks () {
       return this.$store.getters.loadedBlocks
     },
@@ -105,3 +106,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .custom-tool-cta {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+</style>
