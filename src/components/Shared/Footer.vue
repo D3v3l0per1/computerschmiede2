@@ -4,10 +4,23 @@
       <v-card-title class="grey darken-3">
         
         <v-layout row wrap>
-          <v-flex xs12 sm6>
+          <v-flex xs12 sm3>
             <v-container>
               <h2>Ratings</h2>
               <v-divider></v-divider>
+            </v-container>
+          </v-flex>
+          <v-flex xs12 sm3>
+            <v-container>
+              <h2>Austria Leading Company</h2>
+              <v-divider></v-divider>
+              <ul style="list-style: none;" class="pl-0 text-xs-center">
+                <li class="pt-3">
+                  <a href="https://www.leitbetrieb.com/at/leitbetrieb/computerschmiede-jenbach-eu-577.html" target="_blank">
+                    <img src="@/assets/leading_company_austria_logo.jpg" style="width: 80%;" alt="">
+                  </a>
+                </li>
+              </ul>
             </v-container>
           </v-flex>
           <v-flex xs12 sm3>

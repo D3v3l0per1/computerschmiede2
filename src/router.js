@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About'
-import CsPc from './views/CSPC'
+import CsPc from './views/CSPC/CSPC'
 import ThreeDPrints from './views/3DPrint/3DPrints'
 import ThreeDPrint from './views/3DPrint/3DPrint'
 import Create3DExample from './views/3DPrint/Create3DExample'
@@ -94,13 +94,6 @@ const router = new Router({
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  console.log('Loaded')
-  if (to.name) {
-    console.log('lol')
-  }
-  next()
-})
 
 // router.beforeResolve((to, from, next) => {
 //   console.log('Loaded')
