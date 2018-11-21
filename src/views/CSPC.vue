@@ -126,6 +126,15 @@
               <v-flex xs12>
                 <v-layout row wrap class="mb-4">
                   <v-flex xs12 sm6>
+                    <v-card color="cyan darken-2" class="white--text">
+                      <v-layout row wrap>
+                        <v-flex xs5>
+                          <v-img src="https://cdn.vuetifyjs.com/images/cards/foster.jpg" height="125px" contain></v-img>
+                        </v-flex>
+                      </v-layout>                        
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 sm6>
                     <h2>CPU (Prozessor)</h2>
                     <v-divider class="mb-2 mt-1"></v-divider>
                     <p></p>
